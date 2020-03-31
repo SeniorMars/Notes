@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../style.css">
+<title>day2_5</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<p>
+Feb 03, 2020
+<a href="graphics.html">graphics</a>
+</p>
+
+<div id="Lines"><h3 id="Lines" class="header"><a href="#Lines">Lines</a></h3></div>
+
+<div id="Line Algorithm"><h2 id="Line Algorithm" class="header"><a href="#Line Algorithm">Line Algorithm</a></h2></div>
+<ul>
+<li>
+We only have endpoints - not equation of a line.
+
+<li>
+There are no diagonal pixels, only integer points (not irrational pixels). No 0.5 pixel;
+
+<li>
+We have to put pixels in the best place.
+
+<li>
+What pixels make this line look like a "line";
+
+<li>
+How to accomplish this line
+
+<ul>
+<li>
+Draw midpoint then midpoint to first point to midpoint. Floor() it?
+
+<li>
+Percentage wise of a pixel.
+
+<li>
+Anti-alias line: instead of one pixel for a piece of line, you have multiple pixel
+
+<li>
+y = mx + b. Round the y to get an int.
+
+</ul>
+<li>
+Our real problem:
+
+<ul>
+<li>
+ Instead of quadrants we have octanes
+
+<li>
+Assume we will always do left to right
+
+<li>
+In Octant 1:
+
+<ul>
+<li>
+ The slope is between zero and one
+
+<li>
+Limits our potential pixel
+
+<li>
+Our next pixel can be to the right to our pixel or the pixel diagonal to our pixel thanks to the slope
+
+</ul>
+</ul>
+</ul>
+
+
+<div id="Outline"><h2 id="Outline" class="header"><a href="#Outline">Outline</a></h2></div>
+<ul>
+<li>
+for x: x<sup><small>1</small></sup> -&gt; x<sup><small>f</small></sup>
+
+<ul>
+<li>
+Test ( x + 1, y )
+
+<li>
+Test (x + 1, y + 1)
+
+<ul>
+<li>
+Plot Best Result
+
+</ul>
+</ul>
+<li>
+Test? -&gt; y = mx + b ( better in standard form (Ax + By + c) (Test function) ):
+
+<ul>
+<li>
+A = delta Y
+
+<li>
+B = - delta X
+
+<li>
+C = (delta x) b
+
+<li>
+Zero is the the line so which is closer
+
+</ul>
+</ul>
+
+</body>
+</html>

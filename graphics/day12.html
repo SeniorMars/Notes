@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../style.css">
+<title>day12</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<p>
+Mar 12, 2020
+<a href="graphics.html">graphics</a>
+</p>
+<div id="3D Shapes"><h3 id="3D Shapes" class="header"><a href="#3D Shapes">3D Shapes</a></h3></div>
+<div id="Sphere"><h2 id="Sphere" class="header"><a href="#Sphere">Sphere</a></h2></div>
+<ul>
+<li>
+x = rcos0 + c<sub><small>x</small></sub>
+
+<li>
+y = rsin0cos&amp; + c<sub><small>y</small></sub>
+
+<li>
+z = tesin0sin&amp; + c<sub><small>z</small></sub>
+
+<li>
+0: circle creation: 0 -&gt; 360 Degrees or 0 to Pi
+
+<li>
+&amp;: Rotation: 0 to 180 Degreesk 0 to 2 Pi
+
+<li>
+for &amp;: 0 - 2pi:
+
+<ul>
+<li>
+for 0: 0 - pi:
+
+<ul>
+<li>
+x = rcos0 + C<sub><small>x</small></sub>
+
+<li>
+y = rsin0 + c<sub><small>y</small></sub>
+
+<li>
+z = rsin0sin&amp; + c<sub><small>z</small></sub>
+
+</ul>
+</ul>
+<li>
+correct way:
+
+<ul>
+<li>
+for rot: 0 - 1:
+
+<ul>
+<li>
+for circ: 0 - 1:
+
+<ul>
+<li>
+x = rcos(pi * circ) + C<sub><small>x</small></sub>
+
+<li>
+y = rsin(pi * circ)cos(2pi * rot) + C<sub><small>y</small></sub>
+
+<li>
+z = rsin(pi * circ)sin(2pi * rot) + C<sub><small>z</small></sub>
+
+</ul>
+</ul>
+</ul>
+</ul>
+<div id="Torus"><h2 id="Torus" class="header"><a href="#Torus">Torus</a></h2></div>
+<ul>
+<li>
+Givens:
+
+<ul>
+<li>
+center
+
+<li>
+radius of the cross section (r)
+
+<li>
+radius from the center of the torus to the center to the cross section (R)
+
+</ul>
+<li>
+Torus = Circle + Translation + Rotation
+
+<li>
+			x 	+ y
+
+<li>
+			y 	+ x
+
+<li>
+Matrix seems like
+	1st matrix Y.Rotate
+<table class='center'>
+<tr>
+<td>
+cos&amp;
+</td>
+<td>
+0
+</td>
+<td>
+sin&amp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+0
+</td>
+<td>
+1
+</td>
+<td>
+0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+-sin&amp;
+</td>
+<td>
+0
+</td>
+<td>
+cos&amp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+	2nd matrix
+<table class='center'>
+<tr>
+<td>
+rcos0 + R
+</td>
+</tr>
+<tr>
+<td>
+rsin0
+</td>
+</tr>
+<tr>
+<td>
+0
+</td>
+</tr>
+</table>
+
+</ul>
+	
+<ul>
+<li>
+x = cos&amp;(rcos0 + R) + C<sub><small>x</small></sub>
+
+</ul>
+<li>
+y = rsin0 + C<sub><small>y</small></sub>
+
+<li>
+z = -sin&amp;(rcos0 + R) + C<sub><small>z</small></sub>
+
+</body>
+</html>

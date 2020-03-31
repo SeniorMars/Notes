@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../style.css">
+<title>quickSort</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<p>
+Feb 03, 2020
+</p>
+
+<div id="Aim: Recursion with Sorts(11.x)"><h3 id="Aim: Recursion with Sorts(11.x)" class="header"><a href="#Aim: Recursion with Sorts(11.x)">Aim: Recursion with Sorts(11.x)</a></h3></div>
+
+<div id="Quick Sort [0 (n log n)]"><h2 id="Quick Sort [0 (n log n)]" class="header"><a href="#Quick Sort [0 (n log n)]">Quick Sort [0 (n log n)]</a></h2></div>
+<p>
+There are several ways to do this
+</p>
+<ol>
+<li>
+Always pick first element of array.
+
+<li>
+ALways pick last element as pivot
+
+<li>
+pick a random element as pivot
+
+<li>
+pick median as pivot
+
+</ol>
+
+
+<pre java>
+	public static int[] quickSort(arr[], low, high) {
+		if (low &lt; high) {
+		// pi is paritining index
+			pi = partition(arr, low, high);
+			quickSort(arr, low, pi - 1); //before pi
+			quickSort(arr, pi + 1, high); // after pi
+		}
+
+	}
+
+	public static void partition(int[] arr, int low, int high) {
+		// pivot
+		pivot = arr[high];
+
+		index = low;
+
+		for (int j = low; j &lt; high; j++) {
+			// if current element is smaller than the pivot
+			if (arr[j] &lt; pivot) {
+				//swap arr[i] and arr[j]
+				i++ // increment index of smaller element
+			}
+		}
+
+		swap arr[i] and arr[high]
+		quickSort everything before the index and quicksort everything after the index
+	}
+</pre>
+
+<p>
+Partition method will select a pivot element, and then place all elements less than the pivot to the left, and all elements greater to the to the right
+<a href="APCS.html">APCS</a>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../style.css">
+<title>day10</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<p>
+Mar 11, 2020
+<a href="graphics.html">graphics</a>
+</p>
+<div id="Splines"><h2 id="Splines" class="header"><a href="#Splines">Splines</a></h2></div>
+
+<ul>
+<li>
+Curves (cubic for the purposes of this course) that can be connected to appear smooth / continuous
+
+<li>
+Hermite Curves:
+
+<ul>
+<li>
+Defined by two endpoints (p<sub><small>0</small></sub>,p<sub><small>1</small></sub>)
+
+<li>
+Rates of changes at each endpoint (R<sub><small>0</small></sub>,R<sub><small>1</small></sub>)
+
+<li>
+f(t) = at<sup><small>3</small></sup> + bt<sup><small>2</small></sup> + ct + d
+
+<li>
+f<sup><small>1</small></sup>(t) = 3at^2 + 3bt + c
+
+<li>
+f(0) = d = p<sub><small>0</small></sub>
+
+<li>
+f<sup><small>1</small></sup>(0) = c = R<sub><small>0</small></sub>
+
+<li>
+f(1) = a + b + c + d = p<sub><small>1</small></sub>
+
+<li>
+f<sup><small>1</small></sup>(1) = 3a + 2b + c = R<sub><small>1</small></sub>
+
+<li>
+a = 2p<sub><small>0</small></sub> - 2p<sub><small>1</small></sub> + R<sub><small>0</small></sub> + R<sub><small>1</small></sub>
+
+<li>
+b = -3p<sub><small>0</small></sub> + 3p<sub><small>1</small></sub> - 2R<sub><small>0</small></sub> - R<sub><small>1</small></sub>
+
+<li>
+c = R<sub><small>0</small></sub>
+
+<li>
+d = p<sub><small>0</small></sub>
+
+</ul>
+</ul>
+
+</body>
+</html>
