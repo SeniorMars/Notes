@@ -83,16 +83,19 @@ code {
 }
 
 a {
+  text-decoration:none; 
   cursor: default;
   color: #ebdbb2;
 }
 
 a:hover {
+  text-decoration:none; 
   cursor: default;
   color: #98cfe5;
 }
 
 a:visited {
+  text-decoration:none; 
   cursor: default;
   color: #dfaf87;
 }
