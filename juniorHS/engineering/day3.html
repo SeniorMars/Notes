@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+Mar 25, 2020
+<a href="../../engineering/engineering.html">engineering</a>
+</p>
+
+
+<p>
+Understanding True Stress and True Strain
+<a href="https://youtu.be/AkX6JqlWRqc">https://youtu.be/AkX6JqlWRqc</a>
+</p>
+<ol>
+<li>
+Stress is defined as force over the initial cross-sectional area of the test specimen, and strain is defined as the change in specimen length divided by the initial length, but both are just approximations.
+
+<li>
+These approximations are called engineering stress and engineering strain, and are denoted by E
+
+<li>
+To determine the true values, it must be be taken into account that the dimensions of specimen change throughout the duration of the test.
+
+<li>
+A true curve always increases but in the engineering curve it decreases after necking, the rapid reduction in the cross-sectional area of the test piece
+
+<li>
+Necking begins when the engineering curve reaches its maximum value, which it the ultimate tensile strength of the material
+
+<li>
+Two reasons for engineering over true:
+
+<ol>
+<li>
+difficult to measure instantaneous cross-sectional area. So it's hard to make them curves
+
+<li>
+Often analyzing deformation in the elastic region, where the curves have similar values
+
+</ol>
+<li>
+The true curve is used in manufacturing processes and finite element analysis.
+
+<li>
+By making a few assumptions we can calculate the true stress-strain curve based on the engineering curve and avoid instantaneous cross-sectional
+
+<li>
+True stress is calculated by dividing the instantaneous cross-sectional area at each instant throughout the test. It accounts for the fact that the cross-sectional area of the test piece is changing as the test is active.
+
+<li>
+We can assume constant volume because: As such Area * length is equal to the product of the original area and original length -&gt; only valid before necking
+
+<ol>
+<li>
+In the elastic region any volume changes in the elastic region will be small
+
+<li>
+Materials are considered to be incompressible during plastic deformation
+
+</ol>
+<li>
+True stress can be calculated by engineering stress time (1 + engineering strain)
+
+<li>
+True strain can be calculated by ln (1 + engineering strain) also known as logarithmic strain or natural strain
+
+</ol>
+
+</body>
+</html>

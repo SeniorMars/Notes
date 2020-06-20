@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>9.10.19</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+Man memory and secondary memory:
+</p>
+
+<p>
+	Main memory is made up of many consecutive locations, called cells.
+</p>
+
+<p>
+	A cell can be referenced, accessed, and modified inf ideally. A memory 
+wit a low address is just as accessible as a high address. Memory can be processed in any order, or random accessed. 
+</p>
+
+<p>
+	Storage capacity is the number of bytes it can hold. Units of storage in powers of two.
+</p>
+
+<p>
+	Bit 1 b 1/8 of a byte
+	Byte 1B 2^0 = 1
+	Megabyte GB 2^30 - 1, 073, 741, 824
+	Terabyte TB 2^40 = 1, 099, 511, 627, 776
+</p>
+
+<p>
+	Main memory is also called RAM (random access memory). Larger RAM allows a computer to retrieve information from secondary memory less frequently.
+</p>
+
+<p>
+ 	HT &lt;-&gt; Slow Transfer {MAIN MEMORY} Faster Transfer &lt;-&gt; CPU
+</p>
+
+<p>
+	Main memory is considered volatile, because the information will be lost when there is lost in power. Secondary memory are usually non-volatile, where the information is stilled retained where there's no power.
+</p>
+
+<p>
+	Most common secondary memory are hard drives (40 to ~160+ GB), floppy disks (1.44MB), CD-R,DVD-R, memory sticks
+</p>
+	
+<p>
+	Secondary memory (Magnetic Disk):
+		A hard drive consists of magnetic disks, where a bit is represented by a magnetized particle on the disk. A read/ write head passes over the spinning disk. 
+</p>
+		
+<p>
+		 A disk is divided into tracks. Tracks are divided into arcs, called sectors. The Read/Write head "floats" just above the surface. The disk spins at speeds at 3000-8000Ron. There is also a seek time for the head to find the appropriate track. High capacity disk systems consist of many platters on a common spindle.
+</p>
+
+<p>
+	RAM VS ROM:
+</p>
+
+<p>
+	RAM has the ability to read, write, and rewrite. ROM (Read only memory) can be read once the data is written.
+	-Microchips can be ROM, embedded with instructions.
+	-CD-R (700MB) are similar to magnetic disks, except they have microscopic physical pits, which when read by a laser when reflected back. Physical pits, allows mass production of Cads such as music.
+	-CD-AW(700MB) use special material that is heat sensitive the same effect. Operates like a CD-R, but can be changed.
+	-Dads (4.7-8.5GB) have more bits per square inch than a CD, allowing more data to be stored.
+	-Magnetic &lt;tapes&gt;&lt;/tapes&gt;sun as cassettes or high-capacity backup systems, use one long strip of magnetic tape, with a read/write head and two reels.
+</p>
+
+
+<p>
+Aim: THE CPU and the machine cycle (1.1)
+	The central processing unit consists of 3 main components: the control unit, registers, and the arithmetic/logic unit.
+</p>
+
+<p>
+		Main memory &lt;-&gt; Bus &lt;-&gt; CPU (Control unit, arithmetic/logic unit, registers
+</p>
+
+<p>
+		Registers provide a temporary steerage of information. They can be classified as either general-purpose registers or special-purpose registers.
+</p>
+
+<p>
+	Also a kind of memory called cache (might be located next to the CPU). Places to store stuff. La &gt; la &gt; registers. Communication needs to be fast. Less time to look at things.
+</p>
+
+<p>
+	Cache depends on different kinds of address locality to be efficient. Spatial locality: consecutive cell addresses are more likely to be addressed. Temporal locality: recent addresses will be accessed.
+</p>
+
+<p>
+	The control unit coordinates the transfer of data between main memory and the registers It also tells the arithmetic unit to prefer operations on data in the (?).
+</p>
+
+<p>
+	Arithmetic logic unit (ALOE):
+		The arithmetic/logic unit performs calculations and makes decisions.
+</p>
+
+<p>
+	The machine cycle:
+</p>
+
+<p>
+	The control unit performs its job by continually repeating an algorithm, that consists of three stews: Fetch, decode, and execute.
+</p>
+
+<ol>
+<li>
+Retrieve the next instruction( via program counter), and then increment the program counter.
+
+</ol>
+
+
+<p>
+	Processing speed:
+		The system clock generates pulses at regular intervals, and this rate is called the clock speed. 950MHZ, translates to ~950 million pulses our second. The speed if the clock roughly measures how a CPU is.
+</p>
+
+<p>
+	Larger instruction set (ex. 64 bits), larger cache, pipe lining, parallel processing. Increase speed.
+</p>
+
+</body>
+</html>

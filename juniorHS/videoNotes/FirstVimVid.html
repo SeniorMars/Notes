@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>FirstVimVid</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+<a href="../../videoNotes/notes.html">home</a>
+</p>
+
+<p>
+Notes:
+</p>
+<ol>
+<li>
+A work flow - what is the problem?
+
+<li>
+I have a csv file that is messed up and needs to be fixed: vim can help me.
+
+<li>
+%s/^\([0-9]<span id="-\)_\([0-9]"></span><strong id="\)_\([0-9]">\)_\([0-9]</strong>\)/\1.\2/g
+
+</ol>
+
+<p>
+Should be 2 minutes max
+Has alacritty
+Screen key.
+Script:
+</p>
+
+<p>
+Vim has been part of my work flow for months now. That's why I wanted to show what some of the benefits that Vim has that allow me to work faster.
+</p>
+
+<p>
+*Proceeds to search problem.csv using fzf.
+*cds into the directory
+</p>
+
+<p>
+This is a old csv file that I used for an previous project, but I want to update it for a new project. It has data on Pokemon and their according stats, however it has some problems. The first column is supposed to be an ordered entry based on their pokedex entry, but clearly the ordered is messed. In addition, the number for some entries has an underscore, a decimal point would be better. Finally, I would also like to add a new piece of data indicating every whether a Pokemon has a forme, like a mega evolution or a galarian form. In order to complete these tasks I will use vim and some linux commands.
+</p>
+
+<p>
+First let's approach adding a new column to our csv header. We will simply append to the header "Forme" which will indicate a boolean. Now, only some pokemon have a forme, but most don't. So we add False to every row in this file to act as a placeholder. We will fix this value to match its correct value in a bit. To start, we will define a macro, since we don't want to type it out more than once.
+</p>
+
+<p>
+Simply we will append to the line and write FALSE into register w, then we can use command and norm to apply this macro to a range of lines.
+</p>
+
+<p>
+This file has 931 entries so we will the apply the macro by doing :2,932norm @w
+</p>
+
+<p>
+*applies the macro
+</p>
+
+<p>
+There we have added False to 931 lines in a matter of seconds thanks to vim.
+</p>
+
+<p>
+Next we will like to correct this value for pokemon that actually have a form. We will be using the global command and another macro. So we want to simply go to then end of the line where our nex value is, go backwards to the last comma and delete everything afterwards. Then we will append the end of the line with TRUE. Now that we have defined our macro in register e and tested that it works, we can now apply it to the lines that have a pokemon that has a forme. Thankfully, this csv tells us that when the entry has an underscore. We use that to our advantage.
+</p>
+
+<p>
+The global command
+</p>
+<ul>
+<li>
+starts to :g/
+
+</ul>
+
+<p>
+Allows us to perform an operation based on a pattern or literal string. Since these entries are different we will use it with a pattern. We defined the pattern using regular expressions.
+</p>
+
+<p>
+First we want to search a number at the start of the line.
+</p>
+<ul>
+<li>
+writes caret ^
+
+</ul>
+<p>
+then we want to create a block, these blocks will be for later use. The block will match all numbers. We will use an asterik to search for how many number of occurrences and close the block. Finally we add add the underscore, which tells us that it is a forme.
+</p>
+<ul>
+<li>
+writes \([0-9]*\)_
+
+</ul>
+
+<p>
+To make this regular expression search more reliable, since some pokemon have more than 1 form,we will add a second block. This simply searches for any number of digits until the a comma appears.
+</p>
+<ul>
+<li>
+\([0-9]*\),
+
+</ul>
+<p>
+We are done with our pattern. We will tell vim that on every line that matches this pattern to perform the macro store in register e.
+</p>
+
+<p>
+Let's see it in action. It works!
+</p>
+
+<p>
+Next we want to replace that underscore with a decimal point using s or substitution.
+we will reuse the same pattern, but now use the block to our advantage.
+</p>
+
+<p>
+We will edit the last command and replace it with %s to substitute on all lines. and we want to substitute the block to be the same but with a period. We will use the blocks to do this.
+</p>
+
+<p>
+vim allows you to use \a number to represent each block in a previous pattern. so \1 will represent the block before the underscore and \2 will represent the block before the comma.
+</p>
+<ul>
+<li>
+writes \1.\2,
+
+</ul>
+
+<p>
+We will first test this on the first line.
+</p>
+
+<ul>
+<li>
+works
+
+</ul>
+<p>
+Now that we have tested it works, we can use the global command to apply it to the lines that match the pattern. And there you go.
+</p>
+
+<p>
+Finally we will will sort it. We will use the command sort and vim's filter ! to sort it.
+</p>
+
+<p>
+First let's visually select everything and then go into command mode and use !.
+</p>
+
+<p>
+Then sort -h, which is to sort using human standards. And there we go it's ordered! And the data is complete.
+</p>
+
+<p>
+This is how I use vim to make my workflow faster. On a final note, to beginners, I would not suggest switching to vim unless you have time and are committed to. Instead I suggest finding the best tools to completes a task in your work environment.
+</p>
+
+
+
+<p>
+Thanks for watching.
+</p>
+
+</body>
+</html>

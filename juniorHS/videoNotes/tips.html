@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>tips</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+<a href="../../videoNotes/notes.html">home</a>
+</p>
+
+<p>
+General Keybinds:
+[ windows ]
+Win+e to open the file broswer
+win + period for emoji ** very important
+win + l for lock screen
+Win+ d hide your desktop
+You should ask check out virtual desktops
+</p>
+
+<p>
+[ linux ] - there isn't really a set of keyboard shortcuts since you can use can rebind them, but...
+Ctrl-Alt-F1 for a tty
+Ctrl-Alt-F7 to go back to x or a gui
+</p>
+
+<p>
+Some personal tips/ keybinds:
+[ firefox ]
+F6 to focus to url bar (same as C-l)
+C-J for focus to search bar
+</p>
+
+<p>
+[ ssh ]
+This might not apply to seniors who don't have to ssh into homer, but you can add your ssh key to one of our servers to auto connect with ssh-copy-id. No more password!
+</p>
+
+<p>
+[ bash/zsh ] - this might not work on dash or fish.
+Ctrl-R -&gt; search through your history
+!! to reuse the previous command for the current command.
+cd - to go back to the previous directory.
+</p>
+
+<p>
+auto cd - I often find myself moving through a lot of directories. And it's really a a pain to write cd all the time (yes i'm lazy). To get rid of this. Use AUTOCD
+bash - set in your bashrc <code>shopt -s autocd</code>
+zsh - <code>setopt AUTOCD </code> 
+</p>
+
+<p>
+vi mode - by default bash/zsh come with emacs like binding. So if you use vim you might be interested in vi mode.
+bash - <code>set -o vi</code>
+zsh - <code>bindkey -v</code>
+</p>
+
+<p>
+Now if you do use vi mode then you can use <code>&lt;Esc&gt;v</code> to write your command(s) in a vim buffer. Quit and the command should run.
+</p>
+
+<p>
+[ ctags ]
+If you are writing c or any language then I recommend using tags. I personally use universal ctags. Tags allow my to go through my code very easily. Its like the "Go to definiton" many IDEs have.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Ctags">https://en.wikipedia.org/wiki/Ctags</a>
+</p>
+
+<p>
+[ git ]
+gitignore - Everyone here should know about .gitignore - you are kinda required to use it for any project. But did you know that you can have a global gitignore? Just edit your .gitconfig and under [core] add excludesfile = $SomeDir. For example I have it in my .config/git as so
+<code>excludesfile = /home/karl/.config/git/gitignore_global</code>. A global gitignore is really useful for things you never want to upload to your master / version conrol host. For example, I have git always ignore .class for java, tag files and for javascript folks I have node_modules/ to never, never, never have to worry about uploading 1000 MBs of files or more.
+</p>
+
+<p>
+tools - You can make custom tools for git. For example I currently use vim's diff to see any changes in my current git repo:
+[diff]
+	tool = nvimdiff
+[difftool "nvimdiff"]
+	cmd = nvim -d \(LOCAL \)REMOTE
+Now everytime I run git diff it uses vim to show the changes. You can use use this for merge tools
+</p>
+
+<p>
+git hooks - Say you want a script to run a change happens in your repo. You can use git hooks to do that. I currently use it to regenerate tags for my repo when I new file is added.
+</p>
+
+<p>
+[ vim ]
+Two things that have change my life...well 4 things.
+</p>
+
+<p>
+g; and g, to go foward and backwards your change list
+]m and [m to go foward and backwards your methods.
+</p>
+
+</body>
+</html>

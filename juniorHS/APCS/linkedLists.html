@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>linkedLists</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+Feb 11, 2020
+</p>
+
+<p>
+Aim : Linked Lists
+</p>
+
+<p>
+A linked list is a data structure using object references. A collections of nodes joined together makes up a linked list.
+</p>
+
+<p>
+Obj A -&gt; Instance varibales -&gt; Reference to next obj A
+</p>
+
+<p>
+obj head -&gt; Obj a (insatance varibales and Reference to next obj A ) -&gt; obj b (insatance varibales and reference to next obj A) -&gt; null
+</p>
+
+<ol>
+<li>
+Requires a 'head' pointer.
+
+<li>
+The end is a null reference
+
+</ol>
+
+
+<p>
+reference the info a has to next to c next and then change the referencefrom a to c
+</p>
+
+
+<p>
+object Node
+</p>
+
+<p>
+int x;
+Node next;
+</p>
+
+<p>
+setNext(node N)
+</p>
+
+<p>
+c = new Node(...)
+c.setNext(a.getNext())
+</p>
+
+<pre java>
+
+	public class Node {
+		int num;
+		X next;
+
+		public Node (int n) {
+			num = n;
+			next = null;
+		}
+
+		public void setNext( Node ref ) {
+			next = ref
+		}
+	}
+
+</pre>
+
+
+<div id="Implement a single Linked List"><h2 id="Implement a single Linked List" class="header"><a href="#Implement a single Linked List">Implement a single Linked List</a></h2></div>
+<ol>
+<li>
+Create a 'Node' object to hold an int, and also a reference to another 'Node' object.
+
+<li>
+Create another object called LinkedList, and have it hold the 'head' referece which points to a 'Node' object (currently null, since nothing exists).
+
+<li>
+Write Methods for the linked List:
+
+<ol>
+<li>
+public int size() // returns the number of elements
+
+<li>
+public int sum() //Returns the sum of elements
+
+<li>
+public String toString()  // returns a String of elements (overriders toString())
+
+<li>
+<a href="../../APCS/APCS.html">APCS</a>
+
+</ol>
+</ol>
+
+</body>
+</html>

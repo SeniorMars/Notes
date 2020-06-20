@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>9.11.19</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+Notes for 9/11/19
+</p>
+
+<p>
+	Pipe lining  - 1) more smaller stages means less delay. 2) all parts are being used at once during a cycle.
+			Constraints to the speed of the CPU: power + head, physical, cost, backwards compatibility.
+</p>
+
+<p>
+Aim: introduction into machine code
+</p>
+
+<p>
+		The machine language: Instructions are stored as bit patterns, and typically conses of two parts: op-code (operation code) field, and the operand filed.
+			Four hexadecimal digits (2 bytes, 16 bits)
+</p>
+
+<p>
+		1 2 3 4 7
+		Op-code filed (specifies operations)  operand field (further information)
+</p>
+
+<p>
+		Example: 1 3 4 7 (hexadecimal) 001 0011 0100 0111 (binary)
+</p>
+
+<p>
+			Might mean LOAD register 3, with the contents at memory address 47.
+</p>
+
+<p>
+		Instructions including: LOAD&lt; STORE, ADD, OR, AND, ROTATE, SHIFT, JUMP...
+</p>
+
+<p>
+			OF the instructions listed above, JUMP falls into the category of control, allowing the program direction rather than manipulating data. There are two varieties of JUMP:
+</p>
+<blockquote>
+Unconditional and conditional. AN example of thee the former would be "Skip to step number 5";  IF statements
+</blockquote>
+
+<p>
+		Ex: Division by Zero
+			Step 1: Load a register with a value from memory.
+			Step 2: LOAD other register with another value from memory
+			Step 3: If the second value is zero, JUMP to step 6.
+			Step 4: Divide the contents of the first register.
+			Step 5: TORE the contents of the third register in memory.
+			Step 6: Stop
+</p>
+
+<p>
+		program cotter, instruction registers work the machine cycle.
+</p>
+
+<p>
+			Fetes
+			Decode
+			Execute
+</p>
+
+<p>
+		Program counter determines what instructions goes first.
+</p>
+
+
+<p>
+	Program vs Data:
+		many programs can be stored simultaneously in many memory as long as they occupy different locations. Which program will run is determined by setting the program counter. However, both instructions and data are stored in 0s and 1s, and the machine has no way of knowing what is data and what is program.
+</p>
+
+
+<ol>
+<li>
+Store the bit patter found in 6 into memory cell 8A
+
+<li>
+continue exertion as A does not equal 0.
+
+<li>
+See if 3 and C are true and store as 0
+
+</ol>
+
+<p>
+	2, The difference is that many memory cells can have the same bit pattern but there is only one address.
+</p>
+
+<p>
+	3, 1356
+	  Arg3
+	  Biff
+	 80AA
+<a href="../../APCS/APCS.html">APCS</a>
+</p>
+
+</body>
+</html>

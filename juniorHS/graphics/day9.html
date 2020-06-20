@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day9</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+Mar 03, 2020
+</p>
+
+<div id="Splines"><h2 id="Splines" class="header"><a href="#Splines">Splines</a></h2></div>
+<ul>
+<li>
+Curves (Cubic) that can be connected to appear smooth // Continuous. 
+
+<li>
+Bezier &amp; Hermite Curves
+
+</ul>
+
+<div id="Bezier Cruves"><h2 id="Bezier Cruves" class="header"><a href="#Bezier Cruves">Bezier Cruves</a></h2></div>
+<ul>
+<li>
+Define by 4 Control points
+
+<li>
+P0, P3 : Coordinates
+
+<li>
+P1, P2 are Influence points
+
+</ul>
+
+
+<div id="Line"><h2 id="Line" class="header"><a href="#Line">Line</a></h2></div>
+<ul>
+<li>
+P(t): (1 - t)p<sub><small>0</small></sub> + tp<sub><small>1</small></sub>
+
+<li>
+P is two equations: with x and y for y
+
+<li>
+Points pull
+
+</ul>
+
+<div id="Quadric"><h2 id="Quadric" class="header"><a href="#Quadric">Quadric</a></h2></div>
+<ul>
+<li>
+p<sub><small>0</small></sub> -&gt; p<sub><small>1</small></sub> -&gt; p<sub><small>2</small></sub>
+
+<li>
+Q is the green line that pulls our line at the same time.
+
+<li>
+Q(t): (1 - A)Q<sub><small>0</small></sub> + tQ<sub><small>1</small></sub>
+
+<li>
+Q<sub><small>0</small></sub>t: (1 - t)p<sub><small>0</small></sub> + p<sub><small>1</small></sub>
+
+<li>
+q<sub><small>1</small></sub>t: (1-t)p<sub><small>1</small></sub> + tp<sub><small>2</small></sub>
+
+<li>
+qt: (1-t)[(1-tp<sub><small>0</small></sub> + tp<sub><small>1</small></sub>)] + t[(1 - t)p<sub><small>1</small></sub> + tp<sub><small>2</small></sub>]
+
+<li>
+q<sub><small>d</small></sub>: (1-t)<sup><small>2</small></sup>p<sub><small>0</small></sub> + t(1-t)p<sub><small>1</small></sub> + t(1-t)p<sub><small>1</small></sub> + tp<sub><small>2</small></sub>
+
+<li>
+q<sub><small>d</small></sub>: (1 - t)<sup><small>2</small></sup>p<sub><small>0</small></sub> + 2t(1-t)p<sub><small>1</small></sub> + t<sup><small>2</small></sup>p<sub><small>2</small></sub>
+
+<li>
+cubic is linear along two quadratics
+
+</ul>
+
+</body>
+</html>

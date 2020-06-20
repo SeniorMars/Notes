@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>Recursion</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+Aim: Recursion (11.1)
+</p>
+
+<p>
+Recursion requires two ideas:
+</p>
+<ol>
+<li>
+Base Case,
+
+<li>
+Recursion definition
+
+</ol>
+
+<p>
+For example: A list of numbers:
+</p>
+<ol>
+<li>
+A number,
+
+<li>
+Or comma followed by another list.
+
+</ol>
+
+<p>
+Factorial (n!. Where N (integer) &gt;= 0):
+</p>
+<ol>
+<li>
+1 If N == 1
+
+<li>
+N * (N - 1)
+
+</ol>
+
+<p>
+Recursive code to sum 1 + 2 + ... N:
+</p>
+
+<pre java>
+	public	int sum (int num) {
+		int result;
+		if (num == 1)
+			result = 1;
+		else
+			result = num + sum (num - 1);
+		return result;
+	}
+</pre>
+
+<p>
+Recursion vs iteration:
+</p>
+
+<p>
+Recursion, should we used to solve problems in a more elegant fashion. Iteration should be used when the solution isn't complicated.
+</p>
+
+<p>
+Infinite recursion can lead to memory issues, as infinite iteration use CPU cycles.
+</p>
+
+<p>
+Recursion code is shorter. While iteration is longer. You can always make a recursive algorithm into a iterative algorithm and vice versa.
+<a href="../../APCS/APCS.html">APCS</a>
+</p>
+
+</body>
+</html>

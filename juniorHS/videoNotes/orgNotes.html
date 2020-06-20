@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>orgNotes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+<a href="../../videoNotes/notes.html">home</a>
+#+TITLE: Video two - My journey of using vim for java.
+</p>
+
+<ul>
+<li>
+Layout:
+
+</ul>
+<p>
+** Why you shouldn't actually do this and warnings
+** Vim 8.2 -&gt; only vim. no plugins
+*** Just bare vim
+*** Vim with tools
+*** vim with vimrc
+** neovim 0.4.3 (Plugins)
+** workflow(?)
+** After thoughts
+</p>
+
+<ul>
+<li>
+Warnings
+
+</ul>
+<p>
+** Java is the very definition of an objected oriented language. You will have to navigate through hughe code bases. Go through code and go the implmentations and defintions. If you want to change something you will have to go through mutiple files.
+*** Yes It's possible to do this in vim, but it will not be as good (will be a bunch of random parts working together) and if you don't know what you are doing, you will be just spending time to setting something that at the end of the day might not work for you.
+*** Use what you are most comfortable with. Seriously, not to gateblock but I see people spend time setting up vim to be something it's not. Why spend that time, when you can be editing?
+*** Java pretty much wants an IDE. Vim, can imitate a text editor, but by itself it will never be ass good as other IDEs
+*** Use the best tool for the job. For example taking notes, I found emacs and org-mode so much better than vim.
+*** There are VIM plugins (extensions) that might work for you
+*** If you are going this way make I suggest learning some sort of build tool, so you don't need to compile classes over and over again.
+** I am a junior in high school, my workflow works for me, but honestly I have not had a real like experience to valideate my setup. However, it currently works for me.
+** Some people have valid reasons why not to use an IDE. I am part of that group, thus despite my warnings if you still want to go this way, I thought it would be nice if people going this route would have an example of where to start. Which is why I am making this video
+</p>
+<ul>
+<li>
+Vim (no plugins)
+
+</ul>
+<p>
+** start vim with no plugins and show what you can do
+** completion. C-r, make, quickfix list, change variable name.
+** Set hidden
+** quickix list, rename
+** gf, path and find
+</p>
+<ul>
+<li>
+Vim and tools
+
+</ul>
+<p>
+** GNU make
+** JDK's jdb
+** ctags (universal)
+</p>
+<ul>
+<li>
+Vim (Vimrc)
+
+</ul>
+<p>
+** Honestly I only need five lines:
+*** filetype plugin indent on
+*** syntax on
+*** set hidden
+*** set backspace=indent,eol,start
+*** set omnifunc=syntaxcomplete#Complete
+</p>
+<ul>
+<li>
+Neovim (Plugins)
+
+</ul>
+<p>
+** Because at the time I was trying to clear some space and free up my home directory. Plus I was trying to restart my vimrc from scratch. So why not.
+** XDG_CONFIG_HOME
+** I got really use plugins here.
+</p>
+<ul>
+<li>
+After thoughts
+
+</ul>
+<p>
+** no
+</p>
+<ul>
+<li>
+Resources
+
+</ul>
+<p>
+** <a href="https://stackoverflow.com/questions/6411979/compiling-java-code-in-vim-more-efficiently*">https://stackoverflow.com/questions/6411979/compiling-java-code-in-vim-more-efficiently*</a>
+**
+** <a href="https://resources.infosecinstitute.com/android-hacking-security-part-5-debugging-java-applications-using-jdb/*">https://resources.infosecinstitute.com/android-hacking-security-part-5-debugging-java-applications-using-jdb/*</a>
+** <a href="https://www.cs.swarthmore.edu/~newhall/unixhelp/javamakefiles.html">https://www.cs.swarthmore.edu/~newhall/unixhelp/javamakefiles.html</a>
+</p>
+
+</body>
+</html>

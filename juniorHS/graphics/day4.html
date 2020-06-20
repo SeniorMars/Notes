@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+Feb 05, 2020
+<a href="../../graphics/graphics.html">graphics</a>
+</p>
+
+<div id="Line Algorithm Day 3"><h3 id="Line Algorithm Day 3" class="header"><a href="#Line Algorithm Day 3">Line Algorithm Day 3</a></h3></div>
+
+<div id="Octant I"><h2 id="Octant I" class="header"><a href="#Octant I">Octant I</a></h2></div>
+<ul>
+<li>
+slope is between zero and one
+
+<li>
+Possible points:
+
+<ul>
+<li>
+(x + 1, y) and (x + 1, y + 1)
+
+<li>
+Midpoint:
+
+<ul>
+<li>
+(x + 1, y + (1/2))
+
+</ul>
+<li>
+Initial d: A + 1/2 B
+
+</ul>
+<li>
+Line Equation
+
+<li>
+x = X<sup><small>0</small></sup>, Y = Y<sup><small>0</small></sup>
+
+<li>
+d = A + 1/2 B
+
+<li>
+while x &lt;= x<sup><small>1</small></sup>:
+
+<ul>
+<li>
+plot(x, y)
+
+<li>
+if d &gt; 0: // bottom pixel
+
+<ul>
+<li>
+y += 1
+
+<li>
+d += B
+
+</ul>
+<li>
+x += 1
+
+<li>
+d = (x + 1, y) -&gt; meaning we can just do d += A;
+
+<li>
+d = (x + 1, y + 1) -&gt; meaning we have to do d += A + B
+
+</ul>
+<li>
+What if d = A + 1/2 B gives us an odd number -&gt; 0.5 B can gives us a float
+
+<li>
+we can multiply by two to get an int -&gt; 2D = 2A + B and we can do d = 2A + B but we need to multiply multiply B by 2.
+
+<li>
+Add 2B and 2A: we can reassign b to 2B and a to 2A after the first d = 2A + B
+
+<li>
+line algorithm will take two points
+
+<li>
+condition is d &gt; 0
+	-
+
+</ul>
+
+<div id="Other Octants"><h2 id="Other Octants" class="header"><a href="#Other Octants">Other Octants</a></h2></div>
+<div id="Octant 2"><h1 id="Octant 2" class="header"><a href="#Octant 2" class="justcenter">Octant 2</a></h1></div>
+<ul>
+<li>
+All slopes are creator than 1 but less than
+
+<li>
+Possible points:
+
+<ul>
+<li>
+(x, y + 1), (x + 1, y + 1):
+
+</ul>
+<li>
+Midpoint (x + 1/2, y + 1)
+
+<li>
+Initial D: 1/2 A + B -&gt; D = A + 2B // get of ints
+
+<li>
+to modify: y &lt;= y<sup><small>1</small></sup>:
+
+<ul>
+<li>
+if d &lt; 0: // needs to be flipped because we need to move the j
+
+<ul>
+<li>
+x +=1
+
+<li>
+d += 2A
+
+</ul>
+<li>
+y+=1
+
+<li>
+d += 2B
+
+</ul>
+<li>
+condition is d &lt; 0
+
+</ul>
+<li>
+Only worry about Octant 1, 2, 7, 8
+
+<li>
+Others are just extensions
+
+<li>
+Remember to swap
+
+
+</body>
+</html>

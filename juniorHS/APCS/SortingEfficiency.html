@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>SortingEfficiency</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+Dec 09, 2019
+</p>
+
+<div id="Comparing sorts (6.4)"><h2 id="Comparing sorts (6.4)" class="header"><a href="#Comparing sorts (6.4)">Comparing sorts (6.4)</a></h2></div>
+
+<p>
+We have looked at two sorts that use different algorithms to accomplish at the same task. However which one is the better algorithms?
+There are several reasons to prove efficiency:
+</p>
+<ul>
+<li>
+Simple algorithms vs. Complex algorithm,
+
+<li>
+Speed, especially dealing with many items,
+
+<li>
+Memory, less the better,
+
+<li>
+Works well with the data at hand.
+
+</ul>
+
+<p>
+CPU -&gt; ALU - Registers (Hold Bits)
+</p>
+<blockquote>
+-&gt; Level one cache
+-&gt; L2 cache
+-&gt; RAM -&gt; Main memory
+</blockquote>
+
+
+<p>
+Note; There are more efficient algorithms than the selection, and insertion sort, but they're more complex and harder to understand
+</p>
+
+<p>
+Time Efficiency refers to how long it takes an algorithm to run.
+</p>
+
+<p>
+Space efficiency referees to the amount of space an algorithm uses.
+</p>
+
+<p>
+An algorithm that uses less space and runs faster is more efficient.
+</p>
+
+<p>
+Time efficiency of an algorithm is calculated by counting the number of statements executed during a run. As the input (N) grows, we don't need to count individual statements but instead we look how the number of comparisons grows.
+</p>
+
+<div id="Listing"><h2 id="Listing" class="header"><a href="#Listing">Listing</a></h2></div>
+
+<p>
+For example, selection sort has two loops, the outer loop will run (N - 1) times, and the inner loop runs 2 to (N - 1) times
+</p>
+
+<p>
+n(n -1 ) / 2 = # of comparisons
+(n^2 - n) / 2 = # of comparisons
+</p>
+
+<p>
+Now notice as N becomes very large, n<sup><small>2</small></sup> grows much faster than n, so fast that we can ignore n, and just say the algorithm is on the order of n<sup><small>2</small></sup>.
+</p>
+
+<p>
+Analyzing insertion sort, for an input size of n, ow many times does the outer loop run? How many times will the inner loop run for the bes case? Worst case?
+</p>
+
+<p>
+Outer loop will run (n - 1) times.
+</p>
+
+<p>
+Insertion Sort is O(n<sup><small>2</small></sup>) The running time is no worse than on the order of n<sup><small>2</small></sup> units of time.
+</p>
+
+<p>
+Space efficiency we look at the amount of memory needed. When sorting, we are just moving the elements around, therefore we just need n memory location, or the size of the array (we don't consider the space for temporary variables, because the number is constant)
+<a href="../../APCS/APCS.html">APCS</a>
+</p>
+
+</body>
+</html>
