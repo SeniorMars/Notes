@@ -1,1 +1,3 @@
-# Notes
+# Notes of a CS student
+
+My name is Karl and I want to have my notes somewhere. Hopefully it doesn't get too big...
