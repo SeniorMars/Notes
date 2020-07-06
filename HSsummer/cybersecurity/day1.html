@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 1"><h1 id="Day 1" class="header"><a href="#Day 1">Day 1</a></h1></div>
+<p>
+Jul 06, 2020
+<a href="index.html">Home</a>
+</p>
+
+<div id="Day 1-Starting off"><h2 id="Starting off" class="header"><a href="#Day 1-Starting off">Starting off</a></h2></div>
+<p>
+Booting from CD is not secure since you can see and access any file without admin perm
+</p>
+
+<div id="Terms"><h1 id="Terms" class="header"><a href="#Terms">Terms</a></h1></div>
+<p>
+CIA -&gt; Confidentially, Integrity, Availability
+</p>
+
+<div id="Terms-Confidentially"><h2 id="Confidentially" class="header"><a href="#Terms-Confidentially">Confidentially</a></h2></div>
+<p>
+Avoidance of the unauthorized disclosure of information. Protection of data and only allow those who need it - others are blocked.
+</p>
+<ul>
+<li>
+Only students can check their own grades. Teachers can do so
+
+</ul>
+
+<div id="Terms-Confidentially-Tools for Confidentially"><h3 id="Tools for Confidentially" class="header"><a href="#Terms-Confidentially-Tools for Confidentially">Tools for Confidentially</a></h3></div>
+<ul>
+<li>
+Encryption: the transformation of information using a secret called an encryption key, so that the transformed information can only be read using another secret, called the decryption key.
+
+<ul>
+<li>
+Hackers usually "hack" during the communication channel.
+
+<li>
+Encrypt -&gt; encode file
+
+<li>
+decrypt -&gt; decode file using key.
+
+<li>
+Cipher -&gt; means encrypted
+
+</ul>
+<li>
+Access control: Rules and policies that limit access to confidential information to those people and/or systems with a "need to know":
+
+<ul>
+<li>
+Determined by identity and which role they play.
+
+<li>
+Linux groups (i.e. wheel group)
+
+</ul>
+<li>
+Authentication: the determination of the identity or role that someone has.
+
+<ul>
+<li>
+Can be determined using a feature a person has like smart card, password or fingerprint.
+
+</ul>
+<li>
+Authorization: the determination if a person or system is allowed access to resources, based on an access control. Prevent attackers from tricking the system to have access to files.
+
+<li>
+Physical security: the establishment of physical barriers to limit access to protected computation resources:
+
+<ul>
+<li>
+Lock, Cabinets, walls with copper meshes (Faraday Cages).
+
+<li>
+Keyboard has a wire with electromagnetic signal -&gt; could be read.
+
+</ul>
+</ul>
+	
+<div id="Terms-Integrity"><h2 id="Integrity" class="header"><a href="#Terms-Integrity">Integrity</a></h2></div>
+<p>
+The property that information has not be altered in an unauthorized way.
+</p>
+
+<div id="Terms-Integrity-Tools"><h3 id="Tools" class="header"><a href="#Terms-Integrity-Tools">Tools</a></h3></div>
+<ul>
+<li>
+Backups: the periodic archiving of data.
+
+<li>
+Checksums: the computation of a function that maps the contents of a file to a numerical value. A checksum function depends on the entire contents of a file and is designed in a way that even a small change to the input file will result in a different output value.
+
+<li>
+Data correcting codes: methods for storing data in such a way that small changes be easily detected and automatically corrected.
+
+</ul>
+
+<div id="Terms-Availability"><h2 id="Availability" class="header"><a href="#Terms-Availability">Availability</a></h2></div>
+<p>
+The property that information is accessible and modifiable in a timely fashion by those authorized to do so.
+</p>
+
+<div id="Terms-Availability-Tools"><h3 id="Tools" class="header"><a href="#Terms-Availability-Tools">Tools</a></h3></div>
+<ul>
+<li>
+Physical protections infarct suture meant to keep information available even with physical challenges.
+
+<li>
+Computation redundancies: computers and storage devices that serve as fullbacks in the case of failures.
+
+</ul>
+
+<div id="Other security concepts"><h1 id="Other security concepts" class="header"><a href="#Other security concepts">Other security concepts</a></h1></div>
+<p>
+A.A.A -&gt; Assurance, Authenticity, and Anonymity
+</p>
+<div id="Other security concepts-Assurance"><h2 id="Assurance" class="header"><a href="#Other security concepts-Assurance">Assurance</a></h2></div>
+<p>
+Refers to how trust is provided and am ganged in computer systems.
+</p>
+<ul>
+<li>
+Trust management depends on:
+
+<ul>
+<li>
+Policies -&gt; specify behavioral expectation that people or systems have for themselves and others.
+
+<li>
+Permissions, which describe the behaviors that are allowed by the agents that interacts with a person or system.
+
+<li>
+Protections: Describe mechanisms put in place to enforce permissions and  policies.
+
+</ul>
+</ul>
+
+<div id="Other security concepts-Authenticity"><h2 id="Authenticity" class="header"><a href="#Other security concepts-Authenticity">Authenticity</a></h2></div>
+<p>
+The ability to determine that statements, policies, and permissions issued by person or systems are genuine.
+</p>
+<ul>
+<li>
+Digital signatures: Cryptographic computations that allow a person or system to commit to the authenticity of their documents in a unique way that achieves nonrepudiation, which is the property that authentic statements issued by some person or system cannot be denied.
+
+</ul>
+
+<div id="Other security concepts-Anonymity"><h2 id="Anonymity" class="header"><a href="#Other security concepts-Anonymity">Anonymity</a></h2></div>
+<p>
+The property that certain record or transaction not to be attributable it any individual.
+</p>
+<div id="Other security concepts-Anonymity-Tools"><h3 id="Tools" class="header"><a href="#Other security concepts-Anonymity-Tools">Tools</a></h3></div>
+<ul>
+<li>
+Aggregation: the combining of data from many individual so that disclosed sums or averages cannot be tied to any individual.
+
+<li>
+Mixing, the interlining go transactions, information, or communications in a way that cannot be traced to any individual.
+
+<li>
+Proxies: trusted agents that are willing to engage in actions for individual in a way that cannot be traced back to that person.
+
+<li>
+Pseudonyms: fictional identities that can fill in for real identities in communications and transaction, but are otherwise known only to a trusted entity.
+
+</ul>
+
+
+<div id="Threats and attacks"><h1 id="Threats and attacks" class="header"><a href="#Threats and attacks">Threats and attacks</a></h1></div>
+<ul>
+<li>
+Eavesdropping: the interception of information intended for someone else during its transmission over a communication channel.
+
+<li>
+Alteration: unauthorized modification of information:
+
+<ul>
+<li>
+The man-in-the-middle attack, when a person changes data at communication channel.
+
+</ul>
+<li>
+Denial-of-service: the interruption or degradation of a data service or information access:
+
+<ul>
+<li>
+email Spam, to the degree that is meant to simply fill up storage.
+
+</ul>
+<li>
+Masquerading: the fabrication of information that is purported to bes from someone who is not actually the author.
+
+<li>
+Repudiation: the denial of a commitment of data receipt:
+
+<ul>
+<li>
+Attempt to back out of a contract or a protocol that requires the different parties to provide receipts acknowledging that data has been received.
+
+</ul>
+<li>
+Correlation and traceback: the integration of multiple data sources and information flows to determine the source of a particular data stream or piece of information.
+
+</ul>
+
+</body>
+</html>
