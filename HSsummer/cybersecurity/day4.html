@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 4"><h1 id="Day 4" class="header"><a href="#Day 4">Day 4</a></h1></div>
+<p>
+Jul 09, 2020
+<a href="index.html">Home</a>
+</p>
+
+<div id="Computer Forensics"><h1 id="Computer Forensics" class="header"><a href="#Computer Forensics">Computer Forensics</a></h1></div>
+<p>
+Scientific process of persevering, identifying, extracting, documenting, and interpreting data on a computer.
+</p>
+<ul>
+<li>
+Used to obtain potential legal evidence.
+
+</ul>
+
+<div id="The forensic Paradigm"><h1 id="The forensic Paradigm" class="header"><a href="#The forensic Paradigm">The forensic Paradigm</a></h1></div>
+<p>
+4 Stages
+</p>
+
+
+<div id="The forensic Paradigm-Identification"><h2 id="Identification" class="header"><a href="#The forensic Paradigm-Identification">Identification</a></h2></div>
+<ul>
+<li>
+Identification: identity specific objects that store important data for the case analysis:
+
+<ul>
+<li>
+You only care about the data -&gt; hard drive
+
+</ul>
+</ul>
+
+<div id="The forensic Paradigm-Collections"><h2 id="Collections" class="header"><a href="#The forensic Paradigm-Collections">Collections</a></h2></div>
+<p>
+Collections establish a chain of custody and document all steps to prove they the data collected data remains intact and unaltered:
+</p>
+<ul>
+<li>
+maintaining the chain of custody:
+
+<ul>
+<li>
+Maintain possession of all objects
+
+<li>
+must be able to trace evidence back to source
+
+<li>
+prove source integrity
+
+</ul>
+<li>
+Priority by volatility:
+
+<ul>
+<li>
+Some data is more volatile
+
+<li>
+RAM &gt; swap &gt; disk &gt; CDs/DVDs
+
+<li>
+capture more volatile evidence first.
+
+</ul>
+<li>
+Using only tools and methods that have been tested and evaluated to validate their accuracy and reliability.
+
+</ul>
+
+<div id="The forensic Paradigm-Collections-Why use images"><h3 id="Why use images" class="header"><a href="#The forensic Paradigm-Collections-Why use images">Why use images</a></h3></div>
+<ul>
+<li>
+Information on digital media is easily changed.
+
+<li>
+Once changed it is usually impossible to detect that a change has taken place unless other measures have been taken
+
+<li>
+Calculate cryptographic has to establish a check point
+
+<li>
+examining a live file changes state of the evidence
+
+<li>
+The media is the crime scene.
+
+<li>
+Protecting the crime scene is paramount as once evidence is contaminated, it cannot be decontaminated -&gt; only one try
+
+<li>
+A digital image copy allows preservation of the original evidence, prevents alteration of original evidence and allows recreation of the data.
+
+<li>
+A file copy does not do the above
+
+</ul>
+
+<div id="The forensic Paradigm-Analysis and Evaluation"><h2 id="Analysis and Evaluation" class="header"><a href="#The forensic Paradigm-Analysis and Evaluation">Analysis and Evaluation</a></h2></div>
+<p>
+Determination of the type of information stored on digital evidence and conduct a through analysis of the media
+</p>
+<ul>
+<li>
+Know where evidence can be found
+
+<li>
+Understand techniques used to hide or "destroy" digital data
+
+<li>
+toolbox of techniques to discover hidden data and recover "destroyed" data
+
+<li>
+cope with HUGE qualities of digital data
+
+<li>
+Ignore the irrelevant, target the relevant
+
+<li>
+Thoroughly understand circumstances which may make "evidence" unreliable:
+
+<li>
+Where is the evidence:
+
+<ul>
+<li>
+Undeleted files, expect some names to be incorrect
+
+<li>
+Deleted files
+
+<li>
+windows registry
+
+<li>
+print spool files
+
+<li>
+hibernation files
+
+<li>
+temp files
+
+<li>
+slack space:
+
+<ul>
+<li>
+Slack space is the space between the logical end of the file and the physical end of the file.
+
+</ul>
+<li>
+Internet history.
+
+</ul>
+</ul>
+
+<div id="The forensic Paradigm-Reporting"><h2 id="Reporting" class="header"><a href="#The forensic Paradigm-Reporting">Reporting</a></h2></div>
+<p>
+Prepare and deliver an official report
+</p>
+<ul>
+<li>
+Describe the incident
+
+<li>
+Be able to withstand decision makers
+
+<li>
+offer valid conclusions, and opinions, or recommendations.
+
+</ul>
+
+
+<div id="Digital forensics tools"><h1 id="Digital forensics tools" class="header"><a href="#Digital forensics tools">Digital forensics tools</a></h1></div>
+<p>
+Command line tools that are guaranteed not to alter the disk:
+</p>
+<ul>
+<li>
+HELIX: a live cd with plenty of forensic tools ready to be used
+
+<li>
+ENCASE: A series of proprietary forensic software produced by Guidance software
+
+</ul>
+
+<div id="How to hide data"><h1 id="How to hide data" class="header"><a href="#How to hide data">How to hide data</a></h1></div>
+<ul>
+<li>
+Cryptography
+
+<li>
+Stenography: the process of hiding data inside other data
+
+<li>
+Change file names and extensions. .doc -&gt; .tmp
+
+<li>
+Hidden tracks:
+
+<ul>
+<li>
+Most hard disks have # of tracks hidden
+
+<li>
+They can be used to hide/read data by using a hex editor
+
+</ul>
+<li>
+Deleted files
+
+</ul>
+
+<div id="How to hide data-Bitstream vs Backups"><h2 id="Bitstream vs Backups" class="header"><a href="#How to hide data-Bitstream vs Backups">Bitstream vs Backups</a></h2></div>
+<ul>
+<li>
+Forensics copies (Bitstream):
+
+<ul>
+<li>
+Bit for bit copying captures all the data on the copied data
+
+<li>
+Including hidden and residual data
+
+<li>
+Often the "smoking gun" is found in the residual data
+
+</ul>
+</ul>
+
+<div id="Anti-Forensic and data security"><h1 id="Anti-Forensic and data security" class="header"><a href="#Anti-Forensic and data security">Anti-Forensic and data security</a></h1></div>
+<p>
+There are techniques that try to prevent forensic investigators to do their work.
+</p>
+<ul>
+<li>
+Securely deleting data, so that it cannot be restored with forensic methods
+
+<li>
+Prevent the creation of certain data in for first place
+
+<li>
+Data which was never there, obviously cannot be restored with these methods.
+
+<li>
+A desgausser Magnetic Field or Shredder or termite can destroy the media.
+
+<li>
+Just wipe the media with a simple erase or destructive erase
+
+</ul>
+
+</body>
+</html>
