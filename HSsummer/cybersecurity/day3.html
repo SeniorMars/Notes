@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 3"><h1 id="Day 3" class="header"><a href="#Day 3">Day 3</a></h1></div>
+<p>
+Jul 08, 2020
+<a href="../index.html">Home</a>
+</p>
+
+<div id="Authentication"><h1 id="Authentication" class="header"><a href="#Authentication">Authentication</a></h1></div>
+<p>
+Determination of identity.
+</p>
+
+<div id="Authentication-Barcodes"><h2 id="Barcodes" class="header"><a href="#Authentication-Barcodes">Barcodes</a></h2></div>
+<ul>
+<li>
+Made in 20th century for grocery checkout
+
+<li>
+First gen represents data as a series of variable-width, vertical lines of link. Encoding shame.
+
+<li>
+Later become 2D and have been used in airline
+
+<li>
+Provides convenience but not security as they are easy to duplicate
+
+</ul>
+
+<div id="Authentication-Magnetic Stripe Cards"><h2 id="Magnetic Stripe Cards" class="header"><a href="#Authentication-Magnetic Stripe Cards">Magnetic Stripe Cards</a></h2></div>
+<p>
+Plastic card with a magnetic stripe containing information about the owner.
+</p>
+<ul>
+<li>
+The first track of the card contains name of the cardholder and other data
+
+<li>
+The second track contains discretionary data.
+
+</ul>
+
+<div id="Authentication-Magnetic Stripe Cards-Security"><h3 id="Security" class="header"><a href="#Authentication-Magnetic Stripe Cards-Security">Security</a></h3></div>
+<ul>
+<li>
+Vulnerable due to the medium being easy to read and reproduce
+
+<li>
+magnetic stripe reads can be purchased at low cost making it easy to read information
+
+<li>
+With magnetic stripe writer an attacker can easily clone a card.
+
+<li>
+PIN is needed in addition with the card
+
+</ul>
+
+<div id="Authentication-Smart Cards"><h2 id="Smart Cards" class="header"><a href="#Authentication-Smart Cards">Smart Cards</a></h2></div>
+<p>
+Cards that have an integrated circuit with a microprocessor that allowing altering and reading of the data. Is better than magnetic cards.
+</p>
+<ul>
+<li>
+Strong authentication that uses cryptography and used by large companies.
+
+<li>
+Electronic wallet. Debit card.
+
+</ul>
+
+<div id="Authentication-SIM Cards"><h2 id="SIM Cards" class="header"><a href="#Authentication-SIM Cards">SIM Cards</a></h2></div>
+<p>
+SIM stands for Subscriber identity module card.
+</p>
+<ul>
+<li>
+Issued by a network provider and contains information of the owner to allow access to a cellular network.
+
+</ul>
+
+<div id="Authentication-SIM Cards-Security"><h3 id="Security" class="header"><a href="#Authentication-SIM Cards-Security">Security</a></h3></div>
+<ul>
+<li>
+Has a lot of information to authenticate to the approbate network
+
+<li>
+Network provider has a record of the card
+
+<li>
+Features Integrated Circuit Card ID (ICCID) which is a 18-digit number used for hardware identification.
+
+<li>
+Has a international mobile subscriber identity (IMSI) -&gt; more info about owner
+
+<li>
+Contains a 128-bit secret key that is use for authentication.
+
+<li>
+Some have a pin to access all the data.
+
+</ul>
+
+<div id="Authentication-GSM Challenge-Response Protocol"><h2 id="GSM Challenge-Response Protocol" class="header"><a href="#Authentication-GSM Challenge-Response Protocol">GSM Challenge-Response Protocol</a></h2></div>
+<ul>
+<li>
+Cellphone connects to a local base station and transmits its IMSI to connect to a cellular network.
+
+<li>
+The phone will recieve a 128-bit random number to the cellphone, which is ended ed by the SIM Card's secret key using an algorithm called A3.
+
+<li>
+Results in a ciphertext that are computed in both the phone and the base station and if they match the cell phone is allowed to make calls.
+
+</ul>
+
+<div id="Authentication-RFIDs"><h2 id="RFIDs" class="header"><a href="#Authentication-RFIDs">RFIDs</a></h2></div>
+<p>
+Radio frequency identification (RFID) relies on small transponders to transmit identification information via radio waves.
+</p>
+<ul>
+<li>
+RFID chips have an integrated circuit and a coiled antenna to transmit and receive a radio signal.
+
+<li>
+RFID tags must be used with a separate reader or writer. Some which may need a battery
+
+<li>
+Range of RFID varies but it most cases a tag doesn't need to be closed to the reader.
+
+<li>
+Many applications like consumer-product tracking, Car key fobs, or electronic toll transponders.
+
+<li>
+Passports have an RFID chip that contains a digital facial photograph:
+
+<ul>
+<li>
+RFID messages are also encrypted with a secret key 
+
+<li>
+Usually the key is the passport number, the holder's date of birth, and the expiration date. -&gt; Usually on the passport itself since the key is intended to be accessible physically only
+
+<li>
+However an attacker can take this information using social engineering.
+
+</ul>
+</ul>
+
+<div id="Authentication-Biometrics"><h2 id="Biometrics" class="header"><a href="#Authentication-Biometrics">Biometrics</a></h2></div>
+<p>
+Any measure used to identity a person based on biological traits.
+</p>
+<ul>
+<li>
+Contains a sensor or scanner to read in information and compare it to a database of accepted users.
+
+</ul>
+
+<div id="Authentication-Biometrics-Requirements"><h3 id="Requirements" class="header"><a href="#Authentication-Biometrics-Requirements">Requirements</a></h3></div>
+<ul>
+<li>
+Universality: every person should have this characteristic
+
+<li>
+Distinctiveness, each person should have differences on said traits
+
+<li>
+Permanence: Trait should not change over time.
+
+<li>
+Collectability: Should have some quantitative aspect and should be determine quickly.
+
+<li>
+Biometric goes through the reader and is converted into a feature vector, which is compared with a reference vector.
+
+</ul>
+
+<div id="Authentication-Biometrics-Candidates for biometric IDs"><h3 id="Candidates for biometric IDs" class="header"><a href="#Authentication-Biometrics-Candidates for biometric IDs">Candidates for biometric IDs</a></h3></div>
+<ul>
+<li>
+Fingerprints
+
+<li>
+Retina
+
+<li>
+DNA
+
+<li>
+‘Blue ink” sign.
+
+</ul>
+
+</body>
+</html>
