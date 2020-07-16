@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day7</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 7"><h1 id="Day 7" class="header"><a href="#Day 7">Day 7</a></h1></div>
+<p>
+Jul 15, 2020
+<a href="../index.html">Home</a>
+</p>
+
+<div id="Operating Systems Concepts"><h1 id="Operating Systems Concepts" class="header"><a href="#Operating Systems Concepts">Operating Systems Concepts</a></h1></div>
+
+<div id="Operating Systems Concepts-A computer model"><h2 id="A computer model" class="header"><a href="#Operating Systems Concepts-A computer model">A computer model</a></h2></div>
+<p>
+A operating system has to deal with the fact that a computer has different parts such as a CPU, RAM, IO, and long-term storage.
+</p>
+
+<div id="Operating Systems Concepts-OS Concepts"><h2 id="OS Concepts" class="header"><a href="#Operating Systems Concepts-OS Concepts">OS Concepts</a></h2></div>
+<p>
+An operating system (OS) provides interface between the users of a computer and that computer's hardware:
+</p>
+<ul>
+<li>
+Manages the ways applications access the resources
+
+<li>
+Manages multiple people and programs.
+
+</ul>
+
+<div id="Operating Systems Concepts-Multitasking"><h2 id="Multitasking" class="header"><a href="#Operating Systems Concepts-Multitasking">Multitasking</a></h2></div>
+<p>
+Give each program a "slice" of the CPU's time
+</p>
+<ul>
+<li>
+The cpu is running so fast that to any user it appears that the computer is running all the programs simultaneously.
+
+</ul>
+
+<div id="Operating Systems Concepts-The Kernel"><h2 id="The Kernel" class="header"><a href="#Operating Systems Concepts-The Kernel">The Kernel</a></h2></div>
+<p>
+The Kernel is the core component of the OS. It handles the management of low-level hardware resources like memory and IO.
+</p>
+<ul>
+<li>
+Most OS define the tasks associated with the kernel in terms of a layer metaphor, with the hardware component being at he bottom and user applications at the top.
+
+</ul>
+
+<div id="Operating Systems Concepts-Input / Output"><h2 id="Input / Output" class="header"><a href="#Operating Systems Concepts-Input / Output">Input / Output</a></h2></div>
+<p>
+The input/output devices of a computer include things like keyboard and network card etc.
+</p>
+<ul>
+<li>
+Each such device is represented in an operating system using a device driver, which encapsulates the details of ow interaction with that device should be done.
+
+<li>
+The Application programmer interface (API), which the device drivers present to applications programs, allows those programs to interact with those deice at a fairly high level, while the OS does the work.
+
+</ul>
+
+<div id="Operating Systems Concepts-System Calls"><h2 id="System Calls" class="header"><a href="#Operating Systems Concepts-System Calls">System Calls</a></h2></div>
+<p>
+User applications interact with with the kernel using a system called system calls. A system call is a way for programs to interact with the operating system.
+</p>
+<ul>
+<li>
+Systems calls are usually contained in a collection of programs, that is, a library such as the c library (libc).
+
+<li>
+System calls include those for performing file I/O
+
+</ul>
+
+<div id="Operating Systems Concepts-Processes"><h2 id="Processes" class="header"><a href="#Operating Systems Concepts-Processes">Processes</a></h2></div>
+<p>
+A process is an instance of a program that is currently executing
+</p>
+<ul>
+<li>
+The actual contents of all programs are initially stored in persisted storage, such as a hard drive.
+
+<li>
+In order to be executed, a program must be loaded into RAM and uniquely identified as a process.
+
+<li>
+In this way, multiple copies of the same program can be run as different process.
+
+</ul>
+
+
+<div id="Operating Systems Concepts-Processes-Process IDs"><h3 id="Process IDs" class="header"><a href="#Operating Systems Concepts-Processes-Process IDs">Process IDs</a></h3></div>
+<p>
+Each process running on a given computer is identified by a unique nonnegative integer, called the process ID (PID)
+</p>
+<ul>
+<li>
+Given the PID for a process, we can then associate its CPI time, memory usage, user ID (UID), and program name
+
+</ul>
+
+<div id="Operating Systems Concepts-File Systems"><h2 id="File Systems" class="header"><a href="#Operating Systems Concepts-File Systems">File Systems</a></h2></div>
+<p>
+A file system is an abstraction of how the external, nonvolatile memory of he computer is organized.
+</p>
+<ul>
+<li>
+Operating systems organize files hierarchically into directories which can contain more.
+
+<li>
+Thus, a volume, or drive, consist of a collection of nested directories that form a tree.
+
+<li>
+The topmost directory is called the root directory. (In windows c:/)
+
+</ul>
+
+<div id="Operating Systems Concepts-File Systems-File Permissions"><h3 id="File Permissions" class="header"><a href="#Operating Systems Concepts-File Systems-File Permissions">File Permissions</a></h3></div>
+<p>
+File permissions are checked by the OS to determine if a file is readable, writable, or executable by a user or group of users.
+</p>
+<ul>
+<li>
+In Unix based OS's, a file permission matrix shows who is allowed to do what -&gt; ls -l:
+
+<ul>
+<li>
+Files have owner permissions, which show what the owner can do, and group permissions, which show what some group ID can do, and world permissions, which give default access rights.
+
+</ul>
+</ul>
+
+<div id="Operating Systems Concepts-Memory Management"><h2 id="Memory Management" class="header"><a href="#Operating Systems Concepts-Memory Management">Memory Management</a></h2></div>
+<p>
+The Ram memory of a computer is its address space.
+</p>
+<ul>
+<li>
+It contains the cod for a program, its input data, and its working memory.
+
+<li>
+For any running process it keeps its parts in separate address space.
+
+<li>
+Security requires we never mix up these different segments
+
+</ul>
+
+<div id="Operating Systems Concepts-Memory Organization"><h2 id="Memory Organization" class="header"><a href="#Operating Systems Concepts-Memory Organization">Memory Organization</a></h2></div>
+<p>
+Each segment should be separated
+</p>
+<ul>
+<li>
+Text: contains the actual (binary) machine code of the program
+
+<li>
+Data: Contains static program variables that have been initialized in hot program code.
+
+<li>
+BSS: Named for an antiquated acronym for block started by symbol, contains static variables that are uninitialized.
+
+<li>
+Heap: Known as the dynamic segment stores data generated during the execution of a process.
+
+<li>
+Stack: Houses a stack data structure that grows downwards and is used for keeping track of the call structure of subroutines like methods and their arguments.
+
+</ul>
+<p>
+<img src="/home/karl/Work/vimwiki/HSsummer/cybersecurity/2020-07-15_22-40.png" />
+</p>
+
+<div id="Operating Systems Concepts-Virtual Memory"><h2 id="Virtual Memory" class="header"><a href="#Operating Systems Concepts-Virtual Memory">Virtual Memory</a></h2></div>
+<p>
+There is generally not enough computer memory for the address space for all running processes, so the OS sometimes uses the hard drive as virtual memory. This gives each process the illusion that it has acess to its complete address space.
+</p>
+<ul>
+<li>
+The OS supports this view, but it is not how it is organized.
+
+<li>
+Memory is divided into pages, and the OS keeps track fo which ones are in memory and which are in disk.:
+
+<ul>
+<li>
+There can be page faults.
+
+</ul>
+</ul>
+
+<div id="Virtual Machine"><h1 id="Virtual Machine" class="header"><a href="#Virtual Machine">Virtual Machine</a></h1></div>
+<p>
+A view that an OS presents that a process is running on a specific architecture and OS, when its not.
+Benefits:
+</p>
+<ul>
+<li>
+hardware efficiency
+
+<li>
+portability
+
+<li>
+security
+
+<li>
+management
+
+</ul>
+
+</body>
+</html>
