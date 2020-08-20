@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day10</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 10"><h1 id="Day 10" class="header"><a href="#Day 10">Day 10</a></h1></div>
+<p>
+Jul 22, 2020
+<a href="index.html">Home</a>
+</p>
+
+<div id="Malware: Malicious Software"><h1 id="Malware: Malicious Software" class="header"><a href="#Malware: Malicious Software">Malware: Malicious Software</a></h1></div>
+<div id="Malware: Malicious Software-Viruses, worms, torjans, rootkits"><h2 id="Viruses, worms, torjans, rootkits" class="header"><a href="#Malware: Malicious Software-Viruses, worms, torjans, rootkits">Viruses, worms, torjans, rootkits</a></h2></div>
+<p>
+Malware can be classified into multiple categories, depending on propagation and concealment.
+</p>
+<ul>
+<li>
+Propagation:
+
+<ul>
+<li>
+Virus: human-assisted propagation (open email attachment)
+
+<li>
+work: automatic propagation without human assistance
+
+</ul>
+<li>
+Concealment:
+
+<ul>
+<li>
+Rootkit: modifies OS to hide its existence
+
+<li>
+Trojan: provides desirable functionality but hide malicious operation.
+
+</ul>
+<li>
+Various types of payloads, ranging from annoyance to crime.
+
+</ul>
+
+<div id="Propagation"><h1 id="Propagation" class="header"><a href="#Propagation">Propagation</a></h1></div>
+<div id="Propagation-Insider Attacks"><h2 id="Insider Attacks" class="header"><a href="#Propagation-Insider Attacks">Insider Attacks</a></h2></div>
+<p>
+An insider attack is a security breach that is caused or facilitated by someone who is part of the very organization that controls or builds the asset that should Br protected
+</p>
+
+<div id="Propagation-Backdoors"><h2 id="Backdoors" class="header"><a href="#Propagation-Backdoors">Backdoors</a></h2></div>
+<p>
+Sometimes called a trapdoor, and it is a hidden feature or command in a program that allows a user to perform action they would normally not be allowed to do
+</p>
+<ul>
+<li>
+When hidden feature is activated, the program does something unexpected, like giving more permissions to a user
+
+</ul>
+
+<div id="Propagation-Logic Bombs"><h2 id="Logic Bombs" class="header"><a href="#Propagation-Logic Bombs">Logic Bombs</a></h2></div>
+<p>
+A logic bomb is a program that performs a malicious action as a result of a certain logic condition.
+</p>
+<ul>
+<li>
+Example is when a programmer codes the software for the payroll system so it has to pay him.
+
+<li>
+Or when a programmer codes in that the program crashes when it is reaches a certain day.
+
+</ul>
+
+<div id="Propagation-Logic Bombs-The Omega Bomb Code"><h3 id="The Omega Bomb Code" class="header"><a href="#Propagation-Logic Bombs-The Omega Bomb Code">The Omega Bomb Code</a></h3></div>
+<p>
+A person destroyed his company by using a logic bomb on 7/30/96. Deleted critical information.
+</p>
+
+
+<div id="Propagation-Defenses against insider Attacks"><h2 id="Defenses against insider Attacks" class="header"><a href="#Propagation-Defenses against insider Attacks">Defenses against insider Attacks</a></h2></div>
+<ul>
+<li>
+Avoid single points of failure
+
+<li>
+Use code walk-throughs
+
+<li>
+Use archiving and reporting tools
+
+<li>
+Limit authority and  permissions
+
+<li>
+Physically secure critical systems
+
+<li>
+Monitor employee behavior
+
+<li>
+Control
+
+</ul>
+
+<div id="Propagation-Computer Viruses"><h2 id="Computer Viruses" class="header"><a href="#Propagation-Computer Viruses">Computer Viruses</a></h2></div>
+<p>
+A computer virus is computer code that can replicate itself by modifying other files or programs to insert code that is capable of further replication
+</p>
+<ul>
+<li>
+This property is what distinguishes computer viruses from other kinds of Malware.
+
+<li>
+Another feature is that replication requires.
+
+</ul>
+
+<div id="Propagation-Biological Analogy"><h2 id="Biological Analogy" class="header"><a href="#Propagation-Biological Analogy">Biological Analogy</a></h2></div>
+<p>
+Computer viruses share some properties with biological versus like replication.
+</p>
+
+<div id="Propagation-Biological Analogy-Virus Phases"><h3 id="Virus Phases" class="header"><a href="#Propagation-Biological Analogy-Virus Phases">Virus Phases</a></h3></div>
+<p>
+Many phases a virus goes in:
+</p>
+<ul>
+<li>
+Dormant: just exists and avoids detection
+
+<li>
+Propagation phase: replicates itself
+
+<li>
+Triggering: some logical condition causes the birus to be activated.
+
+<li>
+Action phase: performs all actions it was designed to perform (payload):
+
+<ul>
+<li>
+could be innocent or not.
+
+</ul>
+</ul>
+
+<div id="Propagation-Infection types"><h2 id="Infection types" class="header"><a href="#Propagation-Infection types">Infection types</a></h2></div>
+<ul>
+<li>
+Overwriting: destroys original code
+
+<li>
+Pre-pending: keeps original code, possibly compressed
+
+<li>
+Infection of libraries: allows virus to be memory resident like kernel32.dll
+
+<li>
+Macro viruses: Infects MS office documents (often installs in main document template).
+
+</ul>
+
+<div id="Concealment"><h1 id="Concealment" class="header"><a href="#Concealment">Concealment</a></h1></div>
+<ul>
+<li>
+Encrypeted virus:
+
+<ul>
+<li>
+Virus that encrypts its payload to make it more hard to detect. However, an antivirus can use a derptor to deactivate it.
+
+<li>
+Polymorphic virus
+
+<li>
+Encrypted virus with random variations of the decrption engine
+
+<li>
+Detection using CPU emulator
+
+</ul>
+<li>
+Metamorphic virus:
+
+<ul>
+<li>
+A type of malware that is capable of changing its code and signature patterns with each iteration. Considered to more advance threats than typical malware or even polymorphic viruses.
+
+</ul>
+</ul>
+
+<div id="Concealment-Computer Worms"><h2 id="Computer Worms" class="header"><a href="#Concealment-Computer Worms">Computer Worms</a></h2></div>
+<p>
+A computer worm is a malware program that spreads copies of itself without the need to inject itself.
+</p>
+
+
+<div id="Concealment-Computer Worms-Worm Propagation"><h3 id="Worm Propagation" class="header"><a href="#Concealment-Computer Worms-Worm Propagation">Worm Propagation</a></h3></div>
+<p>
+Propagation by finding and infection vulnerable hosts.
+</p>
+<ul>
+<li>
+Need a way to tell if a host is vulnerable or already infected
+
+<li>
+Propagation theory: Classic epidemic model
+
+</ul>
+
+</body>
+</html>

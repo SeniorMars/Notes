@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day9</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 9"><h1 id="Day 9" class="header"><a href="#Day 9">Day 9</a></h1></div>
+<p>
+Jul 21, 2020
+<a href="index.html">Home</a>
+</p>
+
+<div id="Filesystem Security"><h1 id="Filesystem Security" class="header"><a href="#Filesystem Security">Filesystem Security</a></h1></div>
+<div id="Filesystem Security-General Principles"><h2 id="General Principles" class="header"><a href="#Filesystem Security-General Principles">General Principles</a></h2></div>
+<ul>
+<li>
+Files and folds are managed by the OS
+
+<li>
+Applications, including shells, access files through an API
+
+<li>
+Access control entry (ACE):
+
+<ul>
+<li>
+Allow/deny a certain type of access to a file/folder by user/group
+
+</ul>
+<li>
+Access Control list (ACL):
+
+<ul>
+<li>
+Collection of ACEs for a file/folder
+
+</ul>
+</ul>
+
+<p>
+A file handle provides an identifier for a file/folder
+</p>
+<ul>
+<li>
+Hierarchical file organization:
+
+<ul>
+<li>
+Tree (Windows)
+
+<li>
+DAG - Directed Acyclic Graph (Linux)
+
+</ul>
+</ul>
+
+<div id="Filesystem Security-Discretionary Access Control (DAC)"><h2 id="Discretionary Access Control (DAC)" class="header"><a href="#Filesystem Security-Discretionary Access Control (DAC)">Discretionary Access Control (DAC)</a></h2></div>
+<p>
+Users can protect what they own:
+</p>
+<ul>
+<li>
+The owner may grant access to others
+
+<li>
+The owner may define the type of access
+
+</ul>
+<li>
+DAC is the standard model used in operating systems
+
+<li>
+Mandatory Access Control (MAC):
+
+<ul>
+<li>
+Alternative model not covered in this lecture
+
+<li>
+Multiple levels of security for users and documents
+
+</ul>
+
+<div id="Filesystem Security-Closed vs Open Policy"><h2 id="Closed vs Open Policy" class="header"><a href="#Filesystem Security-Closed vs Open Policy">Closed vs Open Policy</a></h2></div>
+<div id="Filesystem Security-Closed vs Open Policy-Closed"><h3 id="Closed" class="header"><a href="#Filesystem Security-Closed vs Open Policy-Closed">Closed</a></h3></div>
+<p>
+Also called "default secure"
+Everything is closed
+</p>
+<ul>
+<li>
+Policy is used by windows to manage access control to the file system
+
+</ul>
+
+<div id="Filesystem Security-Closed vs Open Policy-Open Policy"><h3 id="Open Policy" class="header"><a href="#Filesystem Security-Closed vs Open Policy-Open Policy">Open Policy</a></h3></div>
+<p>
+Allow read access by default.
+</p>
+
+<div id="Filesystem Security-Access control Entries and Lists"><h2 id="Access control Entries and Lists" class="header"><a href="#Filesystem Security-Access control Entries and Lists">Access control Entries and Lists</a></h2></div>
+
+<div id="Filesystem Security-Linux Vs Windows"><h2 id="Linux Vs Windows" class="header"><a href="#Filesystem Security-Linux Vs Windows">Linux Vs Windows</a></h2></div>
+<div id="Filesystem Security-Linux Vs Windows-Linux"><h3 id="Linux" class="header"><a href="#Filesystem Security-Linux Vs Windows-Linux">Linux</a></h3></div>
+<ul>
+<li>
+Allow only ACEs
+
+<li>
+Access to file depends on ACL of file and all its ancestor folders.
+
+<li>
+Start at root of file system
+
+<li>
+Each folder must have execute permission
+
+<li>
+Different paths to same file not equivalent
+
+<li>
+File's ACL must allow requested access
+
+<li>
+Every device is a file.
+
+</ul>
+
+
+<div id="Filesystem Security-Linux Vs Windows-Windows"><h3 id="Windows" class="header"><a href="#Filesystem Security-Linux Vs Windows-Windows">Windows</a></h3></div>
+<ul>
+<li>
+Allow and deny ACEs
+
+<li>
+By default, deny ACEs precede allow ones
+
+<li>
+Access to file depends only on file's ACL
+
+<li>
+Permissions set on a folder usually propagated
+
+</ul>
+
+</body>
+</html>

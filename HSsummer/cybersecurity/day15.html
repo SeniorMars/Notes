@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day15</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 15"><h1 id="Day 15" class="header"><a href="#Day 15">Day 15</a></h1></div>
+<p>
+Aug 03, 2020
+<a href="index.html">Home</a>
+</p>
+
+<div id="Chapter 6"><h1 id="Chapter 6" class="header"><a href="#Chapter 6">Chapter 6</a></h1></div>
+<div id="Firewalls, Tunnels, and Network Intrustion"><h1 id="Firewalls, Tunnels, and Network Intrustion" class="header"><a href="#Firewalls, Tunnels, and Network Intrustion">Firewalls, Tunnels, and Network Intrustion</a></h1></div>
+<div id="Firewalls"><h1 id="Firewalls" class="header"><a href="#Firewalls">Firewalls</a></h1></div>
+<p>
+A firewall is an integrated collection of security measure destined to prevent unauthorized electronic access.
+</p>
+
+<div id="Firewalls-Firewalls Polices"><h2 id="Firewalls Polices" class="header"><a href="#Firewalls-Firewalls Polices">Firewalls Polices</a></h2></div>
+<p>
+To protect private networks and individual machines from the dangers of the great internet, a firewall can be employed to filter incoming or outgoing traffic based on a predefined set of rules called firewall policies.
+</p>
+
+<div id="Firewalls-Policy Actions"><h2 id="Policy Actions" class="header"><a href="#Firewalls-Policy Actions">Policy Actions</a></h2></div>
+<p>
+Packets flowing through a firewall can have one of three outcomes:
+</p>
+<ul>
+<li>
+Accepted
+
+<li>
+Dropped: Not allowed and no indication of failure
+
+<li>
+Rejected
+
+</ul>
+<p>
+Polices used by the firewall to handle packets are based on several properties of the packets being inspected, including the protocol used such as:
+</p>
+<ul>
+<li>
+TCP or UDP
+
+<li>
+The source and destination IP address
+
+<li>
+More
+
+</ul>
+<div id="Firewalls-Blacklists and white lists"><h2 id="Blacklists and white lists" class="header"><a href="#Firewalls-Blacklists and white lists">Blacklists and white lists</a></h2></div>
+<p>
+There are two fundamental approaches to creating firewall polices (or rule sets) to effectively minimize vulnerability to the outside world while maintaining the desired functionality for the machines in the trusted internal network
+</p>
+<ul>
+<li>
+Blacklist approach or white list
+
+</ul>
+
+<div id="Firewalls-Firewall Types"><h2 id="Firewall Types" class="header"><a href="#Firewalls-Firewall Types">Firewall Types</a></h2></div>
+<p>
+Packet filters (stateless): If a packet matches the packet filter's set of rules the packet filter will drop or accept it
+</p>
+<ul>
+<li>
+Stateful filters: can determined if a packet is either the start of a new connection, a part of an existing connection, or is an invalid packet.
+
+<li>
+Application layer: works like a proxy
+
+</ul>
+
+<div id="Firewalls-Firewall Types-Stateless Firewalls"><h3 id="Stateless Firewalls" class="header"><a href="#Firewalls-Firewall Types-Stateless Firewalls">Stateless Firewalls</a></h3></div>
+<p>
+Doesn't maintain any remembered context with respect to the packets it is processing. Instead, it treats each packet attempting to 
+</p>
+
+<div id="Firewalls-Firewall Types-Stateless Restriction"><h3 id="Stateless Restriction" class="header"><a href="#Firewalls-Firewall Types-Stateless Restriction">Stateless Restriction</a></h3></div>
+<p>
+May have to be fairly restricted in order to prevent most attacks
+</p>
+
+<div id="Firewalls-Firewall Types-State full Firewalls"><h3 id="State full Firewalls" class="header"><a href="#Firewalls-Firewall Types-State full Firewalls">State full Firewalls</a></h3></div>
+<p>
+Can tell when packets are part of legitimate sessions originating within a trusted network
+</p>
+<ul>
+<li>
+Only requested TCP connections
+
+</ul>
+
+<div id="Tunnels"><h1 id="Tunnels" class="header"><a href="#Tunnels">Tunnels</a></h1></div>
+<p>
+The contents of TCP packets are not normally encrypted, so if someone is eavesdropping on TCP connection, he can often see the complete contents of the payloads in this session.
+</p>
+<ul>
+<li>
+One way to prevent this is to use tunneling protocol: where the communication between a client and server is automatically encrypted, so that useful eavesdropping stews.
+
+</ul>
+
+<div id="Tunnels-Secure Shell"><h2 id="Secure Shell" class="header"><a href="#Tunnels-Secure Shell">Secure Shell</a></h2></div>
+<p>
+CLI to connect to the server using a TCP session with secret-key exchange to establish.
+</p>
+
+<div id="Tunnels-IPSec"><h2 id="IPSec" class="header"><a href="#Tunnels-IPSec">IPSec</a></h2></div>
+<p>
+Defines a set of protocols to provide confidentiality and authenticity for IP packets
+</p>
+<ul>
+<li>
+Each protocol can operate in one of two modes, transport mode or tunnel mode
+
+<ul>
+<li>
+In transport mode, additional Apses header information is inserted before the data
+
+</ul>
+</ul>
+
+<div id="Tunnels-Virtual Private Networking (VPN)"><h2 id="Virtual Private Networking (VPN)" class="header"><a href="#Tunnels-Virtual Private Networking (VPN)">Virtual Private Networking (VPN)</a></h2></div>
+<p>
+VPN is technology that allows private networks to be safely extend over long physical distances by making use of public network, such as the internet, as a means of transport
+</p>
+
+<div id="Tunnels-Virtual Private Networking (VPN)-TYPES of VPNs"><h3 id="TYPES of VPNs" class="header"><a href="#Tunnels-Virtual Private Networking (VPN)-TYPES of VPNs">TYPES of VPNs</a></h3></div>
+<p>
+Remote access VPNs allow authorized clients to access a private network that is refereed to as an intranet.
+</p>
+<ul>
+<li>
+Site-to-site VPN solutions are designed to provide a secure bridge between two or more physically distant networks.
+
+</ul>
+
+
+<div id="Tunnels-Instrusion Detection Systems"><h2 id="Instrusion Detection Systems" class="header"><a href="#Tunnels-Instrusion Detection Systems">Instrusion Detection Systems</a></h2></div>
+<p>
+Intrusion: aims at compromising the security of the system.
+</p>
+
+<div id="Tunnels-IDS Components"><h2 id="IDS Components" class="header"><a href="#Tunnels-IDS Components">IDS Components</a></h2></div>
+<p>
+The IDS manager compiles data from the IDS sensors to determine if an intrusion has occurred.
+</p>
+<ul>
+<li>
+This determination is based on a set of site polices, which are rules and conditions.
+
+</ul>
+
+<div id="Tunnels-Types of Intrusion Detection Systems"><h2 id="Types of Intrusion Detection Systems" class="header"><a href="#Tunnels-Types of Intrusion Detection Systems">Types of Intrusion Detection Systems</a></h2></div>
+<ul>
+<li>
+Rule-Based Intrusion Detection: identify the types of actions that match certain known profiles and would encode a signature for such an attack.
+
+<li>
+Statical Intrusion Detection:
+
+<ul>
+<li>
+A profile is built, which is statistical representation of the typical ways that a user acts or host is use. It uses this profile to determine threshold for anomalous behaviors and then sound an alarm any time a user or host deviates significantly from the stored profile for that person or machine.
+
+</ul>
+</ul>
+
+</body>
+</html>

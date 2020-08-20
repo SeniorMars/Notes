@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day13</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 13"><h1 id="Day 13" class="header"><a href="#Day 13">Day 13</a></h1></div>
+<p>
+Jul 28, 2020
+<a href="index.html">Home</a>
+</p>
+
+
+<div id="SYN Flood"><h1 id="SYN Flood" class="header"><a href="#SYN Flood">SYN Flood</a></h1></div>
+<ul>
+<li>
+Typically DOS attack, through can be combined with other attack such as TCP hijacking
+
+<li>
+Rely on sending TCP conneciton requests faster than the serer can process them
+
+<li>
+Attacker creates a large number of packets with spoofed source addresses and setting the SYN flag on these
+
+<li>
+The server resonds with a SYN/ACK for which is never gets a response (waits for about 3 minutes each)
+
+<li>
+Eventually the sever stops accepting connection requests, thus triggering a denial of service
+
+<li>
+Can be solved in mutiple ways
+
+<li>
+One the common way to do this is to use SYN cookies.
+
+</ul>
+
+
+<div id="TCP Data Transfer"><h1 id="TCP Data Transfer" class="header"><a href="#TCP Data Transfer">TCP Data Transfer</a></h1></div>
+<p>
+During connection initalization using the three way handshake, inital sequence numbers are exchanged
+</p>
+<ul>
+<li>
+The TCP header includes a 16 bit checksum of the data and parts of the header, including the source and destination.
+
+<li>
+Acknowledgment is used by TCP to keep track of network congestion and control flow
+
+<li>
+TCP connections are terminated with a 4-way handsahke:
+
+<ul>
+<li>
+The client which wishes to terminate the conection sends a DIN message to the other client
+
+<li>
+The other client responds by sending an ACK
+
+<li>
+the other clients sends a FIN
+
+<li>
+the original client now sends an ACK, and the connections is terminated.
+
+</ul>
+</ul>
+
+<div id="TCP Data Transfer-TCP congestion Control"><h2 id="TCP congestion Control" class="header"><a href="#TCP Data Transfer-TCP congestion Control">TCP congestion Control</a></h2></div>
+<ul>
+<li>
+During the 80s, uncontrolled TCP messages casued large scale network congestion
+
+</ul>
+
+
+<div id="TCP Data Transfer-Optimistic ACK attack"><h2 id="Optimistic ACK attack" class="header"><a href="#TCP Data Transfer-Optimistic ACK attack">Optimistic ACK attack</a></h2></div>
+<ul>
+<li>
+Takes advantage of the TCP congestion control
+
+<li>
+Sends flood of ACKS and the server used bandwidth that it does have
+
+<li>
+Finally the network is no longer reachable
+
+</ul>
+
+<div id="TCP Data Transfer-IP Spoofing"><h2 id="IP Spoofing" class="header"><a href="#TCP Data Transfer-IP Spoofing">IP Spoofing</a></h2></div>
+<p>
+An attempt by an intruder to send packets from one IP address that appear to originate at another.
+Blind spoofing:
+</p>
+<ul>
+<li>
+Attack from any source
+
+</ul>
+<p>
+Non blind spoofing:
+</p>
+<ul>
+<li>
+Attacker is from same subnet
+
+</ul>
+
+<div id="TCP Data Transfer-Blind IP Spoofing"><h2 id="Blind IP Spoofing" class="header"><a href="#TCP Data Transfer-Blind IP Spoofing">Blind IP Spoofing</a></h2></div>
+<p>
+The TCP/IP protocol requires that "acknowledgment"  number be sent across sessions
+</p>
+<ul>
+<li>
+Makes sure that the client is getting the server's packets and vice verser
+
+</ul>
+
+<div id="TCP Data Transfer-NON-blind"><h2 id="NON-blind" class="header"><a href="#TCP Data Transfer-NON-blind">NON-blind</a></h2></div>
+<p>
+IP spoofing without inherit wetly knowing the acknowledgments sequence pattern
+</p>
+<ul>
+<li>
+Done on the same subnet
+
+<li>
+Use a packet sniffer to analyze the sequence
+
+</ul>
+
+<div id="TCP Data Transfer-NON-blind-Packet Sniffers"><h3 id="Packet Sniffers" class="header"><a href="#TCP Data Transfer-NON-blind-Packet Sniffers">Packet Sniffers</a></h3></div>
+<p>
+Packer sniffers "read" information transversing a network:
+</p>
+<ul>
+<li>
+Packet sniffers intercept network packets, possibly using ARP cache posioning
+
+</ul>
+
+
+<div id="TCP Data Transfer-NON-blind-Stop Packet Sniffing"><h3 id="Stop Packet Sniffing" class="header"><a href="#TCP Data Transfer-NON-blind-Stop Packet Sniffing">Stop Packet Sniffing</a></h3></div>
+<p>
+Best way it to encrypt packets securely
+</p>
+<ul>
+<li>
+Sniffers can capture the packets, but they are meaningless:
+
+<li>
+SSH is also secure as public/private key are secure
+
+<li>
+Switch networks
+
+<li>
+The best security is not let them in the first place.
+
+</ul>
+
+<div id="TCP Data Transfer-User datagram Protocol"><h2 id="User datagram Protocol" class="header"><a href="#TCP Data Transfer-User datagram Protocol">User datagram Protocol</a></h2></div>
+<p>
+UDP is stateless, unreliable datagram protocol built on top of IP, that it lies on level 4
+</p>
+<ul>
+<li>
+It does not provide delivery guarantees, or acknowledgments, but it is faster
+
+<li>
+Can distinguished data for multiple concurrent applications on a single host.
+
+</ul>
+
+<div id="TCP Data Transfer-Network address translation"><h2 id="Network address translation" class="header"><a href="#TCP Data Transfer-Network address translation">Network address translation</a></h2></div>
+<p>
+Alleviate IPv4 address space congestion
+</p>
+<ul>
+<li>
+Relies on translating address in an internal network, to an external address that is used for communication to and from the outside world
+
+<li>
+NAT is usually implemented by placing a router in between the internal private network and the public network
+
+</ul>
+
+</body>
+</html>

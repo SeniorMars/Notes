@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day9Point5</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 9.5"><h1 id="Day 9.5" class="header"><a href="#Day 9.5">Day 9.5</a></h1></div>
+<p>
+Jul 21, 2020
+<a href="index.html">Home</a>
+</p>
+
+<div id="What is an Exploit?"><h1 id="What is an Exploit?" class="header"><a href="#What is an Exploit?">What is an Exploit?</a></h1></div>
+<p>
+An expolit is any input that takes advantage of a bug, glitch or vulnerability in order to cause an attack.
+</p>
+<ul>
+<li>
+An attack can occur on computer software
+
+</ul>
+
+<div id="What is an Exploit?-Buffer Overflow Attack"><h2 id="Buffer Overflow Attack" class="header"><a href="#What is an Exploit?-Buffer Overflow Attack">Buffer Overflow Attack</a></h2></div>
+<p>
+Very common OS bug
+</p>
+<ul>
+<li>
+Developer fails to include code that check whether an input string fits into its buffer array
+
+<li>
+An input to the running process exceeds the length of the buffer
+
+<li>
+The input string overwrites a portion of the memory of the process
+
+<li>
+causes the application to behave improperly and unexpectedly 
+
+</ul>
+<p>
+Effect of a buffer overflow
+</p>
+<ul>
+<li>
+The process can operate on malicious data or execute malicious code passed in by the attacker
+
+<li>
+If the process is executed as root, the malicious code will be executing with root privileges
+
+</ul>
+
+<div id="What is an Exploit?-Address space"><h2 id="Address space" class="header"><a href="#What is an Exploit?-Address space">Address space</a></h2></div>
+<ul>
+<li>
+Every program needs to access memory in order to run
+
+<li>
+The address space model is used to allow each process to act as if it owns all of memory
+
+<li>
+Each process can allocate space anywhere it wants in memory
+
+<li>
+Most kernels manage each process' allocation of memory through the virtual memory model
+
+</ul>
+
+</body>
+</html>

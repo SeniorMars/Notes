@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day12</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+Name of article
+Jul 27, 2020
+<a href="index.html">Home</a>
+</p>
+
+<div id="Networks: IP and TCP"><h1 id="Networks: IP and TCP" class="header"><a href="#Networks: IP and TCP">Networks: IP and TCP</a></h1></div>
+<p>
+IP is Internet Protocol and TCP is Transmission Control Protocol
+</p>
+
+<div id="Networks: IP and TCP-Internet Protocol"><h2 id="Internet Protocol" class="header"><a href="#Networks: IP and TCP-Internet Protocol">Internet Protocol</a></h2></div>
+<p>
+Connectionless:
+</p>
+<ul>
+<li>
+Each packet is transported independently from other packets
+
+</ul>
+<p>
+Unreliable:
+</p>
+<ul>
+<li>
+Delivery on a best effor basis
+
+<li>
+No acknowledgments
+
+<li>
+Packets may be lost, reordered, corrupted, or duplicated
+
+</ul>
+<p>
+IP packets:
+</p>
+<ul>
+<li>
+Encapsulate TCP and UDP
+
+<li>
+Encapsulated into link-layer frame
+
+</ul>
+
+
+<div id="Networks: IP and TCP-Internet Protocol-IP Address and Packets"><h3 id="IP Address and Packets" class="header"><a href="#Networks: IP and TCP-Internet Protocol-IP Address and Packets">IP Address and Packets</a></h3></div>
+<p>
+IP address come in either 32-bit address (IPV4) and IPv6 (128-bit address)
+</p>
+<ul>
+<li>
+Address subdivided into network, subnet, and host.
+
+<li>
+Broadcast address -&gt; 128.148.32.255
+
+<li>
+Private networks:
+
+<ul>
+<li>
+not routed outside of a LAN
+
+</ul>
+<li>
+IP header includes:
+
+<ul>
+<li>
+Source address
+
+<li>
+Destination address
+
+<li>
+Packet length (ip to 64KB)
+
+<li>
+Time to live (up to 255)
+
+<li>
+IP protocol version
+
+<li>
+Fragmentation information: how many packets
+
+<li>
+Transport layer protocol information
+
+</ul>
+</ul>
+
+<div id="Networks: IP and TCP-Internet Protocol-IP Address Space and ICANN"><h3 id="IP Address Space and ICANN" class="header"><a href="#Networks: IP and TCP-Internet Protocol-IP Address Space and ICANN">IP Address Space and ICANN</a></h3></div>
+<p>
+Hosts on the Internet must have unique IP addresses
+</p>
+<ul>
+<li>
+Internet Corporation for Assigned Names and Numbers:
+
+<ul>
+<li>
+Internation nonprofit organization
+
+<li>
+Incorporated in the US
+
+<li>
+Allocates 
+
+</ul>
+</ul>
+
+<div id="Networks: IP and TCP-Internet Protocol-A Typical University's IP space"><h3 id="A Typical University's IP space" class="header"><a href="#Networks: IP and TCP-Internet Protocol-A Typical University's IP space">A Typical University's IP space</a></h3></div>
+<p>
+Most universities separate their network connecting dorms and the network connecting offices and academic buildings
+</p>
+
+<div id="Networks: IP and TCP-Internet Protocol-IP routing"><h3 id="IP routing" class="header"><a href="#Networks: IP and TCP-Internet Protocol-IP routing">IP routing</a></h3></div>
+<p>
+A router bridges two or more networks:
+</p>
+<ul>
+<li>
+Operates at the network layer
+
+<li>
+Maintains tables to forward packets to the appropriate network
+
+<li>
+Forwarding decisions based solely on the destination address
+
+</ul>
+<li>
+Routing table:
+
+<ul>
+<li>
+Maps ranges of addresses to LANs or other gateway routers
+
+</ul>
+
+<div id="Networks: IP and TCP-Internet Protocol-Internet Routes"><h3 id="Internet Routes" class="header"><a href="#Networks: IP and TCP-Internet Protocol-Internet Routes">Internet Routes</a></h3></div>
+<p>
+Internet Control Message Protocol (ICMP)
+</p>
+<ul>
+<li>
+Used for network testing and debugging
+
+<li>
+Simple messages encapsulated in single IP packets
+
+<li>
+Considered a network layer protocol
+
+</ul>
+<li>
+Tools based on ICMP
+
+<ul>
+<li>
+Ping: sends series of echo request messages and provides statics on routtrip time and packets loss
+
+<li>
+Tracceroute: sends series ICMP packets with increasing TTL value to discover problems
+
+</ul>
+
+
+<div id="Networks: IP and TCP-ICMP attacks"><h2 id="ICMP attacks" class="header"><a href="#Networks: IP and TCP-ICMP attacks">ICMP attacks</a></h2></div>
+<ul>
+<li>
+Ping of death:
+
+<ul>
+<li>
+ICMP specifies messages must fir a single IP packet (64kb)
+
+<li>
+send a ping packet that exceeds maxim size using IP fragmentation
+
+<li>
+Resembled packet caused several operating systems to crash due to a buffer overflow
+
+</ul>
+<li>
+Smurf:
+
+<ul>
+<li>
+Ping a broadcast address using a spoofed source address
+
+</ul>
+</ul>
+
+<div id="Networks: IP and TCP-IP Vulnerabilities"><h2 id="IP Vulnerabilities" class="header"><a href="#Networks: IP and TCP-IP Vulnerabilities">IP Vulnerabilities</a></h2></div>
+<ul>
+<li>
+Unencrypted transmssion:
+
+<ul>
+<li>
+eavesdropping possible at any intermediate host during routing
+
+</ul>
+<li>
+No source Authentication:
+
+<ul>
+<li>
+sender can spoof source address, making it difficult, making it difficult to trace back to attacker
+
+</ul>
+<li>
+No integrity checking:
+
+<ul>
+<li>
+Entire packet, header and payload can be modified while en route to destination, enabling content forgeries, redirections, and man-in-the-middle attacks
+
+</ul>
+<li>
+No bandwidth constraints:
+
+<ul>
+<li>
+Large number of packets can be injected into network to lauch a denial-of-service attack
+
+<li>
+Broadcast address provide additional leverage
+
+</ul>
+</ul>
+
+<div id="Networks: IP and TCP-Denial of service Attack"><h2 id="Denial of service Attack" class="header"><a href="#Networks: IP and TCP-Denial of service Attack">Denial of service Attack</a></h2></div>
+<p>
+Send large number of packet to host to slow down or crash host
+</p>
+<ul>
+<li>
+often executed by botnet
+
+<li>
+long for DoS
+
+<li>
+IP source spoofing:
+
+<ul>
+<li>
+hides attacker
+
+<li>
+Scatters return traffic from victim
+
+</ul>
+</ul>
+
+<div id="Networks: IP and TCP-IP traceback"><h2 id="IP traceback" class="header"><a href="#Networks: IP and TCP-IP traceback">IP traceback</a></h2></div>
+<p>
+Someone is a DoS attack
+Solutions:
+</p>
+<ul>
+<li>
+Filtering and tracing (immediate reaction)
+
+<li>
+Messaging (additional traffic)
+
+<li>
+logging (additional storage)
+
+</ul>
+
+<div id="Networks: IP and TCP-IP traceback-Probabilistic marking"><h3 id="Probabilistic marking" class="header"><a href="#Networks: IP and TCP-IP traceback-Probabilistic marking">Probabilistic marking</a></h3></div>
+<p>
+Method:
+</p>
+<ul>
+<li>
+random injection of information into packet header
+
+<li>
+Changes seldom used bits
+
+<li>
+forward routing information to victim
+
+<li>
+Redundancy to survive packet losses
+
+</ul>
+<p>
+Benefits:
+</p>
+<ul>
+<li>
+No additional traffic
+
+<li>
+No router Storage
+
+<li>
+No packet size increase
+
+<li>
+Can be performed online or offline
+
+</ul>
+
+
+<div id="Networks: IP and TCP-Transmission Control Protocol"><h2 id="Transmission Control Protocol" class="header"><a href="#Networks: IP and TCP-Transmission Control Protocol">Transmission Control Protocol</a></h2></div>
+
+</body>
+</html>

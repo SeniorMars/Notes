@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day11</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 11"><h1 id="Day 11" class="header"><a href="#Day 11">Day 11</a></h1></div>
+<p>
+Jul 23, 2020
+<a href="../index.html">Home</a>
+</p>
+
+<div id="Day 11-Trojan Horses"><h2 id="Trojan Horses" class="header"><a href="#Day 11-Trojan Horses">Trojan Horses</a></h2></div>
+<p>
+A trojan horse is a malware program that appears to perform some useful task, but which also does something with negative consequences.
+</p>
+<ul>
+<li>
+Trojan horses can be installed as part of the payload or other malware but are often installed by a user or administrator, sometimes accidentally.
+
+<li>
+Have largest infection potential
+
+</ul>
+
+
+<div id="Day 11-Rootkits"><h2 id="Rootkits" class="header"><a href="#Day 11-Rootkits">Rootkits</a></h2></div>
+<p>
+A rootkit modifies the OS to hide its existence:
+</p>
+<ul>
+<li>
+Modifies file system exploration utilities.
+
+<li>
+Hard to detect using software that relies on the OS itself
+
+</ul>
+<li>
+RootkitRevealer:
+
+<ul>
+<li>
+By Bryce Cogswell and Mark Russinovich
+
+<li>
+Two scans of file system
+
+<li>
+High-level scan using the windows API
+
+<li>
+Raw scan using disk access methods
+
+<li>
+Discrepancy reveals presence of rootkit
+
+<li>
+Could be defeated by rootkit that intercepts and modifies results of raw scan operations.
+
+</ul>
+
+<div id="Day 11-Malware Zombies"><h2 id="Malware Zombies" class="header"><a href="#Day 11-Malware Zombies">Malware Zombies</a></h2></div>
+<p>
+Malware
+</p>
+
+<div id="Financial Impact"><h1 id="Financial Impact" class="header"><a href="#Financial Impact">Financial Impact</a></h1></div>
+<p>
+Malware often affects a large user population
+</p>
+<ul>
+<li>
+Significant financial impact, through estimates vary widely, up to $100B per year
+
+<li>
+New malware threats have grown
+
+</ul>
+
+<div id="Financial Impact-Professional Malware"><h2 id="Professional Malware" class="header"><a href="#Financial Impact-Professional Malware">Professional Malware</a></h2></div>
+<p>
+Growth in professional cyber crime and online fraud has led to demand for professionally developed malware.
+</p>
+<ul>
+<li>
+New malware is often a custom designed variations of known exploits, so the malware designer can sell different "products" to his/her customers.
+
+</ul>
+
+<div id="Financial Impact-Adware and Spyware"><h2 id="Adware and Spyware" class="header"><a href="#Financial Impact-Adware and Spyware">Adware and Spyware</a></h2></div>
+<ul>
+<li>
+Adware sends more ads
+
+<li>
+Spyware sends your data like keystrokes
+
+</ul>
+
+<div id="Signatures: A Malware Countermeasure"><h1 id="Signatures: A Malware Countermeasure" class="header"><a href="#Signatures: A Malware Countermeasure">Signatures: A Malware Countermeasure</a></h1></div>
+<p>
+Scan compare the analyzed object with a database of signatures.
+</p>
+<ul>
+<li>
+A signature is a virus fingerprint:
+
+<ul>
+<li>
+String with  sequence of instructions specific for each virus.
+
+</ul>
+<li>
+A file is infected if there is a signature inside its code
+
+</ul>
+
+
+<div id="Signatures: A Malware Countermeasure-Signatures database"><h2 id="Signatures database" class="header"><a href="#Signatures: A Malware Countermeasure-Signatures database">Signatures database</a></h2></div>
+<p>
+Common Malware Enumeration (CME):
+</p>
+<ul>
+<li>
+stores known malware
+
+</ul>
+
+<p>
+=== White/ Black Listing ==
+Blacklist: in computing, a blacklist is a basic access control mechanism that allows everyone access, except for the members of the black list (deny list). The opposite is a white list, which means allow nobody, except members of the white list.
+</p>
+
+<div id="Signatures: A Malware Countermeasure-Heuristic Analysis"><h2 id="Heuristic Analysis" class="header"><a href="#Signatures: A Malware Countermeasure-Heuristic Analysis">Heuristic Analysis</a></h2></div>
+<ul>
+<li>
+Useful to identify new and "zero day" malware
+
+<li>
+Code analysis: based on the instructions, the antivirus can determine whether or not the program is malicious (program contains instruction to delete system files)
+
+<li>
+Execution emulation:
+
+<ul>
+<li>
+Run code in isolated emulation
+
+<li>
+monitor actions that target file takes
+
+<li>
+if the actions are harmful, mark as virus.
+
+</ul>
+</ul>
+
+<div id="Signatures: A Malware Countermeasure-Shield Vs On-demand"><h2 id="Shield Vs On-demand" class="header"><a href="#Signatures: A Malware Countermeasure-Shield Vs On-demand">Shield Vs On-demand</a></h2></div>
+<p>
+Antivirus programs
+</p>
+<ul>
+<li>
+Shield:
+
+<ul>
+<li>
+Background process (service/daemon)
+
+<li>
+Scans each time a file is touched (open, copy, execute)
+
+</ul>
+<li>
+On-demand:
+
+<ul>
+<li>
+Scan on explicit user request or according to regular schedule.
+
+<li>
+On a suspicious file, directory, drive etc.
+
+</ul>
+<li>
+To compare we can:
+
+<ul>
+<li>
+comparative: check the number of already known viruses that are found and the time to perform the scan
+
+<li>
+Retrospective: test the proactive detection of the scanner for unknown viruses, to verify which vendor uses better heuristics.
+
+</ul>
+</ul>
+
+<div id="Signatures: A Malware Countermeasure-Online vs Online Anti Virus Software"><h2 id="Online vs Online Anti Virus Software" class="header"><a href="#Signatures: A Malware Countermeasure-Online vs Online Anti Virus Software">Online vs Online Anti Virus Software</a></h2></div>
+<p>
+Online:
+</p>
+<ul>
+<li>
+Free browser plug-in
+
+<li>
+Authentication through third party certificate
+
+<li>
+No shielding
+
+<li>
+Software and signatures update each scan
+
+<li>
+Poorly configurable 
+
+<li>
+Scans needs Internet connection
+
+<li>
+Report collected by the company that offers the service
+
+</ul>
+<p>
+Online:
+</p>
+<ul>
+<li>
+Paid annual subscription
+
+<li>
+Installed on the OS
+
+<li>
+software distributed securely by the vendor online or a retailer
+
+<li>
+System Shielding
+
+<li>
+Scheduled software and signatures updates
+
+<li>
+Easily configurable
+
+<li>
+Scan without Internet connection
+
+<li>
+Report collected locally and may be sent to vendor.
+
+</ul>
+
+<div id="Signatures: A Malware Countermeasure-Quarantine"><h2 id="Quarantine" class="header"><a href="#Signatures: A Malware Countermeasure-Quarantine">Quarantine</a></h2></div>
+<p>
+A suspicious file can be isolated in a folder called quarantine
+Quarantine 
+</p>
+
+</body>
+</html>

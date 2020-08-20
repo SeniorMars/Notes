@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day8</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 8"><h1 id="Day 8" class="header"><a href="#Day 8">Day 8</a></h1></div>
+<p>
+Jul 16, 2020
+<a href="index.html">Home</a>
+</p>
+
+<div id="Operating System Security"><h1 id="Operating System Security" class="header"><a href="#Operating System Security">Operating System Security</a></h1></div>
+<div id="Operating System Security-The boot sequence"><h2 id="The boot sequence" class="header"><a href="#Operating System Security-The boot sequence">The boot sequence</a></h2></div>
+<p>
+The action of loading an operating system into memory from a powered-off state is known as booting or bootstraping.
+</p>
+<ul>
+<li>
+When a computer is turned on, it first executes code stored in BIOS (basic input/output system)
+
+<li>
+BIOS loads into memory the second-stage boot loader, which handles loading the rest of the OS into memory and then passes control to the OS
+
+</ul>
+
+<div id="Operating System Security-BIOS Passwords"><h2 id="BIOS Passwords" class="header"><a href="#Operating System Security-BIOS Passwords">BIOS Passwords</a></h2></div>
+<p>
+A malicious user could potentially seize exaction of a computer at server points.
+</p>
+<ul>
+<li>
+To prevent this, many computers have a BIOS password that does not allow a second-stage boot leader without authentication.
+
+</ul>
+
+<div id="Operating System Security-Hibernation"><h2 id="Hibernation" class="header"><a href="#Operating System Security-Hibernation">Hibernation</a></h2></div>
+<p>
+Computers can go into a powered-off state known as hibernation
+</p>
+<ul>
+<li>
+While in this state, the OS stores the contents of machine's memory into a hibernation file (such as hiberfil.sys) so it restore everything
+
+<li>
+Exposes a machine to potentially invasive forensic investigation.
+
+</ul>
+
+<div id="Operating System Security-Event logging"><h2 id="Event logging" class="header"><a href="#Operating System Security-Event logging">Event logging</a></h2></div>
+<p>
+Logs keep track of all process are running, Internet aces, crashes: for the purpose of troubleshooting and determining the cause of a security breach.
+</p>
+
+<div id="Operating System Security-Memory and Filesystem Security"><h2 id="Memory and Filesystem Security" class="header"><a href="#Operating System Security-Memory and Filesystem Security">Memory and Filesystem Security</a></h2></div>
+<p>
+The contents of a computer are encapsulated in its memory and Filesystem.
+</p>
+<ul>
+<li>
+Thus, protection of a computer's contents has to start with the protection of its memory and Filesystem.
+
+</ul>
+
+
+<div id="Operating System Security-Password Security"><h2 id="Password Security" class="header"><a href="#Operating System Security-Password Security">Password Security</a></h2></div>
+<p>
+The basic approach to guessing passwords from password file is to conduct a dictionary attack, where each word in a dictionary is hashed and the resulting value is compared with the hashed passwords in the password file.
+</p>
+<ul>
+<li>
+A dictionary of 500k words is enough to discover most passwords
+
+</ul>
+
+<div id="Operating System Security-Password Salt"><h2 id="Password Salt" class="header"><a href="#Operating System Security-Password Salt">Password Salt</a></h2></div>
+<p>
+Use "salt", which is associated with a random number with each userID.
+</p>
+<ul>
+<li>
+Rather than comparing the has of an entered password, the system compares the hash an entered password and the salt for the associated userid.
+
+</ul>
+
+<div id="Operating System Security-Password Salt-How Salt increases search space size"><h3 id="How Salt increases search space size" class="header"><a href="#Operating System Security-Password Salt-How Salt increases search space size">How Salt increases search space size</a></h3></div>
+<p>
+Increase search space for dictionary attack on a solted password is of size 2<sup><small>B</small></sup>*D. About 2 quadrillion. Where B is the number of bits of the random salt and D.
+</p>
+
+</body>
+</html>

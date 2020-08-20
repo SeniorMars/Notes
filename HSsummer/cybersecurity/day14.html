@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day14</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 14"><h1 id="Day 14" class="header"><a href="#Day 14">Day 14</a></h1></div>
+<p>
+Jul 30, 2020
+<a href="index.html">Home</a>
+</p>
+
+
+<div id="Computer Networks"><h1 id="Computer Networks" class="header"><a href="#Computer Networks">Computer Networks</a></h1></div>
+<div id="Computer Networks-Circuit and Packet Switching"><h2 id="Circuit and Packet Switching" class="header"><a href="#Computer Networks-Circuit and Packet Switching">Circuit and Packet Switching</a></h2></div>
+<p>
+Circuit Switching:
+</p>
+<ul>
+<li>
+Legacy phone network
+
+<li>
+Single route through sequence of hardware devices established when two nodes start communications
+
+<li>
+Data sent along route
+
+<li>
+Route maintained until communications ends
+
+</ul>
+<p>
+Packet switching:
+</p>
+
+<div id="Computer Networks-Protocols"><h2 id="Protocols" class="header"><a href="#Computer Networks-Protocols">Protocols</a></h2></div>
+<p>
+A protocol defines the rules for communications between computers
+</p>
+
+
+<div id="Computer Networks-Encapsulation"><h2 id="Encapsulation" class="header"><a href="#Computer Networks-Encapsulation">Encapsulation</a></h2></div>
+<p>
+A packet typically consists of:
+</p>
+<ul>
+<li>
+Control information for addressing the packet: header and footer
+
+<li>
+Data: payload
+
+</ul>
+<p>
+A network protocol N1 can use the services of another network Protocol N2
+</p>
+<ul>
+<li>
+A packet P1 of N1 is encapsulated into a packet p2 of N2
+
+<li>
+The payload of p2 is p1
+
+<li>
+The control information of p2 is derived from that of pa
+
+</ul>
+
+<div id="Computer Networks-Intermediate Layers"><h2 id="Intermediate Layers" class="header"><a href="#Computer Networks-Intermediate Layers">Intermediate Layers</a></h2></div>
+<p>
+Link layer:
+</p>
+<ul>
+<li>
+Local area network: Ethernet, WIFI, optical fiber
+
+<li>
+48-bit media access control (MAC) addresses
+
+<li>
+Packets called frames
+
+</ul>
+<p>
+Network layer:
+</p>
+<ul>
+<li>
+Internet-wide communication
+
+<li>
+Best efforts
+
+</ul>
+<p>
+Transport layer:
+</p>
+<ul>
+<li>
+16-bit address(ports) for classes of applications
+
+<li>
+Connection-oriented transmission layer protocol (TCP)
+
+<li>
+Connectionless user datagram protocol (UDP)
+
+</ul>
+
+<div id="The OSI Model"><h1 id="The OSI Model" class="header"><a href="#The OSI Model">The OSI Model</a></h1></div>
+<p>
+The OSS (Open system interconnect)
+</p>
+
+
+<div id="Network interfaces"><h1 id="Network interfaces" class="header"><a href="#Network interfaces">Network interfaces</a></h1></div>
+<p>
+Network interface: device connecting a computer to a network:
+</p>
+<ul>
+<li>
+Ethernet card
+
+<li>
+Wifi adapter
+
+</ul>
+<li>
+A computer may have multiple network interfaces
+
+<li>
+Packets transmitted between network interfaces
+
+<li>
+Most local area networks, (including Ethernet and Wifi) broadcast frames
+
+<li>
+In regular mode, each network interface gists the frames intended for it
+
+<li>
+Traffic sniffing can be accomplished by configuring the network interface to read all frames (promiscuous model)
+
+
+<div id="MAC addresses"><h1 id="MAC addresses" class="header"><a href="#MAC addresses">MAC addresses</a></h1></div>
+<p>
+Most network interfaces come with a predefined MAC address
+</p>
+<ul>
+<li>
+A MAC address is a 48-bit number usually represented in hex
+
+</ul>
+
+<div id="Switch"><h1 id="Switch" class="header"><a href="#Switch">Switch</a></h1></div>
+<p>
+A network device that operates at the link layer and has multiple ports, each connoted to a computer
+</p>
+<ul>
+<li>
+Operation of a switch:
+
+<ul>
+<li>
+learn the MAC address of each computer connected to it
+
+<li>
+Forward frames only to the destination computer
+
+</ul>
+</ul>
+
+<div id="Combining Switches"><h1 id="Combining Switches" class="header"><a href="#Combining Switches">Combining Switches</a></h1></div>
+<p>
+Switches can be arranged into a tree
+</p>
+<ul>
+<li>
+Each port learned the MAC addresses of the machines in the segment (subtree) connected to it
+
+<li>
+Fragments to unknown MAC addresses are broadcast
+
+<li>
+Frames to MAC addresses in the same segment as the sender are ignored
+
+</ul>
+
+<div id="MAC Address Filtering"><h1 id="MAC Address Filtering" class="header"><a href="#MAC Address Filtering">MAC Address Filtering</a></h1></div>
+<p>
+A switch can be configured to provide service only to machines with specific MAC addresses
+</p>
+<ul>
+<li>
+Allowed MAX address need to be registered with a network administrator.
+
+<li>
+A MAC spoofing attack impersonates another machine:
+
+<ul>
+<li>
+Find out MAC address of target machine
+
+<li>
+Reconfigure MAC address of rogue machine
+
+</ul>
+</ul>
+
+
+<div id="MAC Address Filtering-ARP"><h2 id="ARP" class="header"><a href="#MAC Address Filtering-ARP">ARP</a></h2></div>
+<p>
+The address resolution protocol (ARP) connects the network layer to the data layer be converting IP addresses to MAC addresses
+ARP works by broadcasting requests and caching responses for future use
+</p>
+
+<div id="MAC Address Filtering-ARP-ARP Spoofing"><h3 id="ARP Spoofing" class="header"><a href="#MAC Address Filtering-ARP-ARP Spoofing">ARP Spoofing</a></h3></div>
+<p>
+The ARP table is updated whenever an ARP responds is revived
+</p>
+
+</body>
+</html>

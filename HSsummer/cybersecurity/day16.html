@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day16</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 16"><h1 id="Day 16" class="header"><a href="#Day 16">Day 16</a></h1></div>
+<p>
+Aug 04, 2020
+<a href="index.html">Home</a>
+</p>
+
+<div id="Spam and Cybertime"><h1 id="Spam and Cybertime" class="header"><a href="#Spam and Cybertime">Spam and Cybertime</a></h1></div>
+<div id="Defending Against Bank Fraud"><h1 id="Defending Against Bank Fraud" class="header"><a href="#Defending Against Bank Fraud">Defending Against Bank Fraud</a></h1></div>
+<p>
+Multi-factor authentication:
+</p>
+<ul>
+<li>
+Hardware token generating one-time codes
+
+<li>
+Personal images and sentences to defend against phishing
+
+<li>
+Code sent by email/sms to resisted address to authorize debit transactions
+
+</ul>
+<p>
+Account ownership verification:
+</p>
+<ul>
+<li>
+Linking accounts for ACH transfers requires knowledge 
+
+</ul>
+
+<div id="SMTP"><h1 id="SMTP" class="header"><a href="#SMTP">SMTP</a></h1></div>
+<p>
+Simple Mail Transfer Protocol:
+</p>
+<ul>
+<li>
+Client connects to server
+
+<li>
+Client sends commands to server
+
+<li>
+Server acks or notifies of error
+
+</ul>
+<p>
+Security issues:
+</p>
+<ul>
+<li>
+Sender not authenticated
+
+<li>
+message and headers transmitted in plain text
+
+</ul>
+
+<div id="SMTP-What is email span"><h2 id="What is email span" class="header"><a href="#SMTP-What is email span">What is email span</a></h2></div>
+<p>
+Unsolicited bulk email:
+</p>
+<ul>
+<li>
+Forbidden by all major ISPs
+
+<li>
+Considered "acceptable business practice" by US Direct Marketing Association (DMA)
+
+<li>
+Unsolicated email and bulk email are individually acceptable practices for people, business, and organizations;
+
+<li>
+Spam arises from the combination of unsolicited
+
+</ul>
+<div id="SMTP-Blacklisting"><h2 id="Blacklisting" class="header"><a href="#SMTP-Blacklisting">Blacklisting</a></h2></div>
+<p>
+Spamhaus Black List (SBL):
+</p>
+<ul>
+<li>
+Real-time database of IP addresses of verified spam sources
+
+<li>
+Eliminates about 10% of spam before transmission takes places
+
+</ul>
+
+<div id="SMTP-Credit Cards"><h2 id="Credit Cards" class="header"><a href="#SMTP-Credit Cards">Credit Cards</a></h2></div>
+<p>
+Information is supposed to be kept secret, but shared with multiple merchants, transmitted often insecurely, and low entropy of the credit card number
+</p>
+<ul>
+<li>
+Simple scheme for uses, banks, and merchants
+
+<li>
+But fraud is easy to commit
+
+<li>
+Tradeoff:
+
+<ul>
+<li>
+No security measures to facilitate use
+
+</ul>
+</ul>
+
+<div id="SMTP-Credit Cards-Fraud"><h3 id="Fraud" class="header"><a href="#SMTP-Credit Cards-Fraud">Fraud</a></h3></div>
+<p>
+Buy popular goods and resell them
+</p>
+<ul>
+<li>
+Buy financial instrument:
+
+</ul>
+
+<div id="SMTP-Credit Cards-Fraud-Defending"><h4 id="Defending" class="header"><a href="#SMTP-Credit Cards-Fraud-Defending">Defending</a></h4></div>
+<p>
+One time credit card numbers:
+</p>
+<ul>
+<li>
+Available from several issuers
+
+<li>
+Does not work for subscription plans
+
+<li>
+Time consuming
+
+</ul>
+<li>
+Monitor transactions:
+
+<ul>
+<li>
+Email or text message for each transaction
+
+<li>
+Continuous annyoyance to catch a rare event
+
+</ul>
+<li>
+Password enabled transactions:
+
+<ul>
+<li>
+Similar to pin for ATM cards
+
+<li>
+Difficult to share password only with the bank and communicate verification outcome to merchant (three-party protocol)
+
+</ul>
+
+<div id="SMTP-Bank Accounts"><h2 id="Bank Accounts" class="header"><a href="#SMTP-Bank Accounts">Bank Accounts</a></h2></div>
+<p>
+Account information:
+</p>
+<ul>
+<li>
+Supposed to be kept secret
+
+<li>
+Same account number for deposits and withdrawals
+
+</ul>
+<p>
+Common bank Frauds:
+</p>
+<ul>
+<li>
+Forged checks:
+
+<ul>
+<li>
+Created checks with magnetic ink printers
+
+<li>
+Cash with fake ID
+
+<li>
+Low amounts typically not scrutinized
+
+</ul>
+<li>
+Wire transfer:
+
+<ul>
+<li>
+Send fax to bank to order wire transfer
+
+<li>
+Most effective
+
+</ul>
+</ul>
+
+
+<div id="SMTP-Bank Accounts-Defending Against Bank Fraud"><h3 id="Defending Against Bank Fraud" class="header"><a href="#SMTP-Bank Accounts-Defending Against Bank Fraud">Defending Against Bank Fraud</a></h3></div>
+<p>
+Multi-factor authentication
+</p>
+<ul>
+<li>
+Account ownership verification
+
+<li>
+Restrictions
+
+</ul>
+
+</body>
+</html>
