@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 2"><h1 id="Day 2" class="header"><a href="#Day 2">Day 2</a></h1></div>
+<p>
+Oct 13, 2020
+<a href="index.html">Home</a>
+</p>
+
+<p>
+The language and the compiler:
+</p>
+<ul>
+<li>
+In order to make it easier to reaso about programs, Rust neds to place some restrictions on the programs you can write.
+
+<ul>
+<li>
+This makes it difficult (sometimes impossible) to write certain programs in safe Rust
+
+</ul>
+<li>
+A lot of the cool guarantees we get from Rust come the checks its compiler performs
+
+</ul>
+
+<p>
+Rust can sometimes exceed the performance of C because of compiler optimizations.
+</p>
+ 
+<p>
+How does rust prevent us from making the making the errors we made?
+Ownership:
+</p>
+<ul>
+<li>
+The reason you ran into trouble when decomposing your code!
+
+<li>
+Ownership Rules:
+
+<ul>
+<li>
+First, let's take a look at the ownership rules. Keep these rules in mind as we work through the examples the illustrate them:
+
+<ul>
+<li>
+Each value in Rust has a variable that's called its owner.
+
+<li>
+There can only be one owner at a time.
+
+<li>
+When the owner goes out of scope, the value will dropped.
+
+</ul>
+</ul>
+</ul>
+
+<ul>
+<li>
+Controlling references to resources is a broader idea in systems programming that isn't unique to Rust.
+
+<li>
+That means you can no longer use it in main!
+
+<li>
+Lifetimes:
+
+<ul>
+<li>
+The lifetime of a vlaue starts when it's created and ends the last time it's used
+
+<li>
+Rust doesn't let you have a reference to a value that last longet than the value's lifetime
+
+<li>
+Rust computes lifetimes at compile time using static analysis (this is often an over-approximation)
+
+<li>
+Rust calls the special "drop" funciton of 
+
+</ul>
+</ul>
+
+</body>
+</html>

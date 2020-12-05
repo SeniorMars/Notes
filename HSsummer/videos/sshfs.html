@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>sshfs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+So I told my friend about this tool I use everyday, and he suggested that I share with others.
+</p>
+
+<p>
+sshfs (<a href="https://github.com/libfuse/sshfs">https://github.com/libfuse/sshfs</a> ) is one of my favorite 'tools'. Rather than directly sshing into the remote server, sshfs allows you to mount the remote server into your filesystem.
+</p>
+
+<p>
+What's so cool about this is it allows you to use your system the way you like it rather than having to deal with passing your config files to the remote server. This means that any tools/applications that you installed are accessible to use with the remote system. Honestly, the best part is that you don't have to deal with getting copy n pasting to work.
+</p>
+
+<p>
+The only times I don't use this tool is when the connection to the remote server is flimsy. For example, I once dealt with a server in the middle east that had so much latency that the server was registering my keyboard inputs with huge delays. If you want to use it with the stuy servers, it should be fine though.
+</p>
+
+<p>
+I would recommend using this tool to make it easier to work with remote servers. If you are on linux, then it's probably in your distro's repository. For arch, it's a simple <code># pacman -Syu sshfs</code>.
+</p>
+
+<p>
+I currently have it set up with homer to start my ssh-agent server and just mount it as an alias. <code>ssh-agent sshfs chernandez10@homer.stuy.edu: ~/.local/mmt/homer</code>. sshfs works with your ssh config so if you put your identify file with the host in your config it should not prompt you for a password when connecting remote and use your rsa key. If you really need to then you can use the -o flag to input your identifyfile.
+</p>
+
+<p>
+Just fyi I put, mounting is usually in /mmt/, but I did not want to deal with sudo permissions. You could, if you wish, make mess with your sudoers config and put sshfs with NOPASSWD. However, I would suggest not to do this because it's no really safe.
+</p>
+
+</body>
+</html>

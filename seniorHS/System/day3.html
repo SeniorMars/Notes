@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 3"><h1 id="Day 3" class="header"><a href="#Day 3">Day 3</a></h1></div>
+<p>
+Oct 01, 2020
+<a href="index.html">Home</a>
+</p>
+
+<div id="Day 3-Decaring &amp; Defining functinos"><h2 id="Decaring &amp; Defining functinos" class="header"><a href="#Day 3-Decaring &amp; Defining functinos">Decaring &amp; Defining functinos</a></h2></div>
+<ul>
+<li>
+Function and variables names are both examples or identifiers
+
+<li>
+An identifiers must b declared before they can be used
+
+<li>
+A function declaration provides its return type, name, and parameters. This is also known as a function header.
+
+<li>
+dobule dylan(int jack);
+
+</ul>
+
+<div id="Day 3-Compling and Linking"><h2 id="Compling and Linking" class="header"><a href="#Day 3-Compling and Linking">Compling and Linking</a></h2></div>
+<ul>
+<li>
+Compiler are more complex than straightfoward source code -&gt; executable code, translators, and have multiple componets
+
+<li>
+To start, we'll look at three major pieces of gcc, the preprocessor compiler, and the linker
+
+</ul>
+
+<ul>
+<li>
+Preprocessor:
+
+<ul>
+<li>
+The preprocessor is, at it's simplest (interperation, a text replacement system).
+
+<li>
+Modifies source code file with text, as opposed to binary data.
+
+<li>
+All preprocessor commands start with # (i.e #include &lt;stdio.h&gt;)
+
+<li>
+Not that preprocessor directives do not end in ;
+
+<li>
+A few basic preprocessor directives:
+
+<ul>
+<li>
+#include:
+
+<ul>
+<li>
+adds the entire of the included file
+
+</ul>
+<li>
+#define:
+
+<ul>
+<li>
+Usuage: #define Text_Replace
+
+<li>
+WIll replace every instance of Text with the provided replacement
+
+<li>
+Examples:
+
+<ul>
+<li>
+#define PI 3.14
+
+</ul>
+<li>
+Note tha define does not use =, because this is not an assignment
+
+<li>
+You can also use #define to declare function-like macros:
+
+<ul>
+<li>
+#define MAX(a,b) a&gt; b ? a : b
+
+<li>
+MAX(x,y) would turn into x &gt; y ? x:y
+
+</ul>
+</ul>
+<li>
+#ifdef IDENTIFER ... #endif:
+
+<ul>
+<li>
+Conditional preprocessor statement.
+
+<li>
+If IDENTIFER is not defined (for the preprocessor), then include all the lines of code up to the #endif
+
+<li>
+if IDENTIFER is defined, skip everyting up to the #endif
+
+<li>
+Examples
+
+</ul>
+</ul>
+</ul>
+</ul>
+
+<ul>
+<li>
+Compilers:
+
+<ul>
+<li>
+Turns C source code into binary code
+
+<li>
+the result is not an executable program.
+
+<li>
+Only one C file is compiled at a time
+
+<li>
+The compiler checks called functions against their declared headers, but if a function is defined in a separate file, its code is not added at this step
+
+<li>
+<code>$ gcc -c &lt;FILE&gt;</code> will run the preprocessor and compile stages only, creating a non executable binary object file. The resulting file will have an extension of .o
+
+<li>
+Since an executable is not created, you can usually compile, via '$gcc -c', a C file that does not have a main function
+
+</ul>
+</ul>
+
+<ul>
+<li>
+Linker:
+
+<ul>
+<li>
+Combines compiled binary code from multiple files into a single executable program
+
+<li>
+Will automatically look for standard library source code, or anything that can be included using &lt;&gt;.
+
+<li>
+if mutliple definitions for any identifier is found, the linker will fail.
+
+<li>
+Must find one definition for main.
+
+<li>
+if you provide gcc multiple files. it will compile each one individual and then run the linker on them together
+
+<li>
+if you provide gcc any .o files, it will skip the compilation step for those files and then use them during linking.
+
+<li>
+you cna mix and match .co and .o files gcc, but it is not encouraged.
+
+<li>
+For example these would be good ways to compile a program, if you had files foo.c goc.
+
+</ul>
+</ul>
+
+</body>
+</html>

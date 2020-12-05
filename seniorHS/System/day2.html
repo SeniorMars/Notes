@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 2"><h1 id="Day 2" class="header"><a href="#Day 2">Day 2</a></h1></div>
+<p>
+Sep 24, 2020
+<a href="index.html">Home</a>
+</p>
+
+<div id="Day 2-Notes"><h2 id="Notes" class="header"><a href="#Day 2-Notes">Notes</a></h2></div>
+<ul>
+<li>
+All C primatives are numeria types. All
+
+<li>
+The only difference is the size of the variable and whether it is an integer or floating point
+
+<li>
+size can be platform dependent, but there are general standards
+
+<ul>
+<li>
+sizeof(type) will return the size of a data type or variable
+
+</ul>
+</ul>
+
+<table>
+<tr>
+<td>
+type
+</td>
+<td>
+size (byes)
+</td>
+<td>
+range (of all boundaries are inclusive)
+</td>
+</tr>
+<tr>
+<td>
+char (byte)
+</td>
+<td>
+1
+</td>
+<td>
+[-128, 127]
+</td>
+</tr>
+<tr>
+<td>
+short
+</td>
+<td>
+2
+</td>
+<td>
+[-32,758, 32, 767]
+</td>
+</tr>
+</table>
+<ul>
+<li>
+Char is an integer type, but can be used to reger to character literals as well.
+
+<ul>
+<li>
+char c = 97; and char = 'a'; are both equally valid statements
+
+</ul>
+</ul>
+
+<div id="Day 2-Variables in C"><h2 id="Variables in C" class="header"><a href="#Day 2-Variables in C">Variables in C</a></h2></div>
+<ul>
+<li>
+C is statically types, meaning every variable must be given a type.
+
+<li>
+Variables must be declared before they are used.
+
+<ul>
+<li>
+You can assign a variable a value at declaration (i.e int x = 10;)
+
+</ul>
+<li>
+There is not default value for variables
+
+<ul>
+<li>
+In java, everything got initialized to 0, that's a thing of the past.
+
+<li>
+Remember that declaring a variable means requesting a piece of memory to be used by your program of the corresponding variable size (int means you are asking for 4 bytes of memory).
+
+<li>
+If you do initialized a variable, it's inital value will be whatever happens to be in the piece of memory that was assigned to your variable. Sometimes, that's 0, sometimes it some other number. Who knows?
+
+</ul>
+<li>
+variables can be declared as unsigned (i.e unsigned int u;)
+
+<ul>
+<li>
+unsigned variables have a lower bound of 0 and a higher upper bound than their signed counterparts.
+
+<li>
+unsigned char uc; 
+
+</ul>
+</ul>
+
+</body>
+</html>

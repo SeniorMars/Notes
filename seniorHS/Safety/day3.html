@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 3"><h1 id="Day 3" class="header"><a href="#Day 3">Day 3</a></h1></div>
+<p>
+Oct 15, 2020
+<a href="index.html">Home</a>
+</p>
+
+<ul>
+<li>
+Destructor -&gt; drop functions
+
+<li>
+Compile time vs run time:
+
+<ul>
+<li>
+Ownership as a concept is challenging
+
+<li>
+Compile rust and c are different, runtime the same
+
+</ul>
+<li>
+What does my Rust code actually do?:
+
+<ul>
+<li>
+Passing ownership: just passes a pointer:
+
+<ul>
+<li>
+the compiler will insert the approapraite free() call for you
+
+</ul>
+<li>
+Passing references: just passes a pointer
+
+<li>
+Explict copy: copies memory!
+
+</ul>
+<li>
+won't compile expecting an expression -&gt; nevermind you have to be able to modify the string.
+
+<li>
+should work since you are just passing a references
+
+<li>
+Ownership -&gt; passing ownership to the function but it's out of scope
+<pre rust>
+	fn eat(s: String) {
+		println!("{}", s);
+	}
+	pub fn main() {
+		let s = String::from("hello"):
+		eat(s);
+		// top function frees s so bottom function will have a null variable of s
+		eat(s);
+		
+	}
+</pre>
+
+</ul>
+
+<ul>
+<li>
+option returns some or none (null).
+
+</ul>
+
+</body>
+</html>

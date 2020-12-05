@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day11</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Day 11"><h1 id="Day 11" class="header"><a href="#Day 11">Day 11</a></h1></div>
+<p>
+Oct 28, 2020
+<a href="index.html">Home</a>
+</p>
+
+<p>
+Dynamic memory allocation:
+</p>
+<ul>
+<li>
+malloc(size_t x):
+
+<ul>
+<li>
+Allocates x bytes of heap memory
+
+<li>
+Returns the address at the beginning of the allocation
+
+<li>
+Returns a void *
+<pre c>
+		int *p;
+		p = malloc( 5 * sizeof(int) )
+</pre>
+
+</ul>
+<li>
+free(void *p)
+
+<ul>
+<li>
+Releases dynamically allocated memory.
+
+<li>
+Has one parameter, a pointer to the beginning of a dynamically block of memory
+
+<li>
+Every call ato malloc/calloc should have a corresponding call to free
+
+</ul>
+<li>
+free(void * p)
+
+<ul>
+<li>
+Releases dynamically allocated memory.
+
+<li>
+Has one parameter, a pointer tao the beginning of a dynamically allocated block of memory
+
+<li>
+Every call at mallow/calloc should have a corresponding call at free
+
+</ul>
+<li>
+calloc(size_t n, size_t x)
+
+<ul>
+<li>
+allocates n * x bytes of memory, ensuring every bit is 0
+
+<li>
+Works like mallow in all other ways
+<pre c>
+		int*p;
+		p = calloc(5, sizeof(int));
+</pre>
+
+</ul>
+<li>
+realloc(void *p, size_t x)
+
+<ul>
+<li>
+Changes the amount of memory allocated for a block to x bytes
+
+<li>
+P must point to the beginning
+
+<li>
+Returns a pointer to the beginning of the block (this is not always the same as p)
+
+<li>
+If x is smaller than the original size of the allocation, the extra bytes will be released
+
+<li>
+if x is larger than the original size then either:
+
+<ul>
+<li>
+if there is enough space at the end of the original allocation, the original allocation will be updated
+
+<li>
+If there is not enough space, a new allocation will be created, containing all the original values. The orginal allocation will be fried.
+
+</ul>
+</ul>
+</ul>
+
+</body>
+</html>

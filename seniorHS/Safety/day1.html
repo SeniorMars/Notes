@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../../style.css">
+<title>day1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<div id="Safety"><h1 id="Safety" class="header"><a href="#Safety">Safety</a></h1></div>
+<p>
+Oct 12, 2020
+<a href="index.html">Home</a>
+</p>
+
+<p>
+CS110:
+</p>
+
+<p>
+Why Rust:
+</p>
+<ul>
+<li>
+Why not C/C++?
+
+<li>
+Why not GC'ed languages (java, python, Go, etc).
+
+<ul>
+<li>
+GC = garbage collector
+
+</ul>
+<li>
+Push the arguments into the stack and call functions.
+
+<li>
+Pop off stack.
+
+<li>
+C does not do bounds checks, so you can overwrite memory. Haven't gone off the stack, but you can overwrite the return address.
+
+<li>
+Bad people can supply a pointer with own assembly code and will create a bomb. :(
+
+<li>
+Buffer overflow -&gt; write random data that isn't good.
+
+<li>
+Morris Worm (circa 1988) -&gt; FingerD send info to computers to send querry, but.
+
+<li>
+gets(line) -&gt; might get a buffer overflow.
+
+<li>
+gets() -&gt; c function that reads from stdin. Haven't told how big that region of memory. Not sufficient memory.
+
+<li>
+All...C code is dangerous.
+
+<li>
+Latest version and countless issues.
+
+<li>
+Dealing with these issues
+
+<li>
+Valgrind -&gt; tells you about problem that happened not the problems that haven't happened. Doesn't realize there
+
+<ul>
+<li>
+Dynamic analysis
+
+</ul>
+<li>
+Made a lot of progress but there is still a lot of problems.
+
+</ul>
+
+<ul>
+<li>
+Why not use GC'ed languages. Java is just like I want an array.
+
+<li>
+Would just make everyone dependent of this.
+
+</ul>
+
+<ul>
+<li>
+Huge benefits. VERY EXPENSIVE - no matter what type of garbage collection is used, there will always be nontrivial memory overhead.
+
+<li>
+Disruptive:
+
+<ul>
+<li>
+Drop what you're doing - it's time for GC.
+
+</ul>
+<li>
+Non-deterministic:
+
+<ul>
+<li>
+When will the next GC pause be? Who knowns! Depends on how much memory is being used
+
+</ul>
+<li>
+Precludes manual optimization:
+
+<ul>
+<li>
+In some situations, you may want to structure you data in memory in a specific way in order to achieve high cache performance.
+
+<li>
+GC can't know how you will use memory, so it optimizes for the average use case.
+
+</ul>
+<li>
+Latency matters:
+
+<ul>
+<li>
+User interfaces
+
+<li>
+Games
+
+<li>
+Self-driving cars
+
+<li>
+Payment processing
+
+<li>
+High Frequency trading
+
+</ul>
+</ul>
+
+<p>
+Garbage collectors aren't all about safety.
+</p>
+<ul>
+<li>
+Later in the quarter, we'll learn about race conditions
+
+<li>
+Garbage collections does not preclude race conditions! Memory safety issues persist even in garbage-collected environments.
+
+</ul>
+
+</body>
+</html>
