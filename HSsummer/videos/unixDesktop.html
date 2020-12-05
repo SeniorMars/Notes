@@ -28,5 +28,41 @@ alacritty
 vim
 </p>
 
+
+<p>
+Title: Introduction into the beauty of Unix Desktops.
+</p>
+
+<p>
+If you have been into technology, then you have probably have seen a fancy desktop that some elitist has shown off all smug. In fact, if you are into the Unix community, then you probably have an idea of what I am talking about: people showing off their beautiful unix desktops full of vim, neofetch, some music visualizer, gotop, or a combination of these text user interface applications. Unfortunately, these are screenshots, and as such you probably, don't see how useful or amazing these setups are. So, I decided to make this video to just show off the applications I use in my setup.
+</p>
+
+<p>
+Unix's desktops are pretty diverse, and while you could be using MacOs or some other unknown Linux Distribution, they are all using open software in one way or another: Open software is awesome. Even in the same same linux distribution, people could be using something different application to change they way their desktop appears. For example, a display server, an application that is in control of how your screen looks. While, I personally use Xorg, some folks might be trying out a new display compositor like wayland, and this changes what applications they can run. Here is my configuration file when xorg lanuches: just some few applications I want on start up.
+</p>
+
+<p>
+The first thing you should know is the difference between a desktop environment and a window manager. A desktop environment is a full experience that gives you everything you need to allow you to work right off the bat. A window manager, is simply an application that controls how your windows are placed and how. Every desktop environment has a window manager, but the latter is a symbol for customization or minimalism: you control how your setup works example. I use i3wm-gaps, a dynamic titling window manager that has space around the borders. Here is it is in action: *<span id="Unix Desktop-shows some skills"></span><strong id="shows some skills">shows some skills</strong>*. As it's title suggest, it can easily switch between floating mode and titling mode. Like so *<span id="Unix Desktop-does stuff"></span><strong id="does stuff">does stuff</strong>*. This is going to be a common theme in this video: but i3 has its own configuration file, and in it you will see why it's so customizable: for example, I can set which applications auto start after I start xorg, or which colors my borders are, or which rules some other applications will follow. To complement, the use of the virtual desktops, and some features I missed from a taskbar, I got polybar to back me up. It is a customizable statusbar, which allows the use of custom scripts and more. *<span id="Unix Desktop-opens up config"></span><strong id="opens up config">opens up config</strong>* For example, it has a i3 module that allows me to access my nine virtual desktops. I put chinese characters because I found them cool. For custom things, I have some this arch script I downloaded that tells me when I have updates for pacman or my aur helper to download. Additionally, I have a reddit script, that shows up when I have a inbox replies to my main account. Very useful.
+</p>
+
+<p>
+*<span id="Unix Desktop-cut"></span><strong id="cut">cut</strong>*
+i3 does a lot, and it works for me, but I am trying other window managers out: which is why I started to use another program: Sxhkd, simple x hot key daemon, which just controls what certain keypresses will do. The syntax for its configuration file is pretty simple to follow, which I like. Using some certain keypresses, I can launch important applications like my terminal. However, for most other applications I use rofi, a demnu replacement and an application that can be used for a lot of things. For example, launching other application or using it for other scripts or tasks like a calculator or a clipboard manager. Very useful, and you can make it look pretty with icons.
+</p>
+
+<p>
+The next thing for a full system is of course desktop notifications. I use dunst, a notification manager, and it's very cool because you can combine it with some keypress to send you notifications about your system with notify-send. For example, I have notifications for brightness, and my powerlevel. This is useful, so my statusbar doesn't get crowded up.
+</p>
+
+<p>
+*<span id="Unix Desktop-cut"></span><strong id="cut">cut</strong>*
+Look browsers are pretty important too, so I use firefox with some custom css to make it look great. Just the way I like it. *<span id="Unix Desktop-shows userChrome"></span><strong id="shows userChrome">shows userChrome</strong>* I also use better discord and the same theme.
+</p>
+
+<p>
+*<span id="Unix Desktop-cut"></span><strong id="cut">cut</strong>*
+Finally, I have alacritty, which is my terminal emulator that is written in rust. It's pretty fast and minimal, which I like. It also automatically reloads its configuration file when you make changes to it. ZSH is the shell I use with a theme call powerlevel 10k with vim mode. Talking about text editors, I use vim with a custom gruvbox theme (well, I use it throughout my system) and airline for its different modes. With all these things, you can make some sick screen shots!
+</p>
+
 </body>
 </html>
